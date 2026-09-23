@@ -122,7 +122,7 @@ flowchart LR
   * **Dual-Tap Telemetry:** Pairing direct engine metrics from `colt-gpu-01:8000` (prefill latency, decode time, VRAM KV cache, Radix prefix hits) with LiteLLM proxy timings to calculate the exact Gateway Overhead Tax.
   * **Thermal & Throttling Limits:** Correlating Streaming Multiprocessor clocks (`DCGM_FI_DEV_SM_CLOCK`) with GPU core temps (`DCGM_FI_DEV_GPU_TEMP`) to detect thermal clock step-downs under sustained multi-agent workloads.
 * **Decisive Artifacts:**
-  * [`docs/models/sparkleader-nemotron-49b.md`](file:///home/camp-colt-mayor-agent/colony/docs/models/sparkleader-nemotron-49b.md)
+  * [`battlebook/models/sparkleader-nemotron-49b.md`](file:///home/camp-colt-mayor-agent/colony/rigs/a-staff/battlebook/models/sparkleader-nemotron-49b.md)
   * `rigs/colt-results/benchmarks/` versioned datasets (`BENCH-v1.0-nemotron49b-baseline`).
 
 ---
