@@ -61,7 +61,7 @@ On the ASUS Ascent GX10 architecture, the 128 GiB LPDDR5X memory bus is shared d
 
 ### 2.2 Storage & Hydration Latency
 - **ReadyLocker Fast Cache:** Local 4TB NVMe SSD provides warm engine startup in $\le 12$ seconds.
-- **Cold Hydration Tier:** Re-hydration from misty NFS ModelDepot requires $3\text{--}5$ minutes over 10GbE before container readiness probes succeed (`/v1/health/ready` on port 8002).
+- **Cold Hydration Tier:** Re-hydration from misty NFS ModelDepot requires 7–10 minutes over 1GbE before container readiness probes succeed (`/v1/health/ready` on port 8002).
 
 ### 2.3 Thermal & Power Envelope
 - **Operating Power:** 30W idle, 140W typical inference load, 220W peak TDP.
