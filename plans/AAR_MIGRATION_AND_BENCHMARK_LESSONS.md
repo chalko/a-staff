@@ -29,6 +29,12 @@ This After-Action Review documents critical blindspots, operational lessons, and
 * **The Doctrinal Standard:**  
   Prior to any infrastructure cutover, an Advance Party must establish an isolated scratch city (`hq-forward`) to run preflight validation (`gc doctor`, `bd` Dolt store operations, tmux session spawning, tool version matching) before touching production colony repositories.
 
+### 1.3 Virtual CPU Model Masking & PCLMULQDQ Requirement (Antigravity / BoringCrypto)
+* **The Blindspot:**  
+  Configuring VM 9100 with default or legacy CPU types (e.g. `x86-64-v2-AES`) masks out modern x86 extensions. Google Antigravity (compiled with BoringCrypto and Abseil) requires the Carry-less Multiplication instruction extension (`pclmul` / `pclmulqdq`) for crypto acceleration. When `pclmul` is missing, `go/sigill-fail-fast` triggers an immediate `SIGILL (Illegal instruction core dumped)`.
+* **The Doctrinal Standard:**  
+  All VMs hosting Antigravity, Gas City agents, or cryptographic workloads on Proxmox/KVM must be configured with `cpu_type = "host"` (Host CPU Passthrough). Changing CPU types requires a full QEMU power cycle (`qm stop <vmid> && qm start <vmid>`); guest soft reboots do not reload the virtual CPU model.
+
 ---
 
 ## 2. Command & Operational Hygiene
