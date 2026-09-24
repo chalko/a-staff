@@ -35,7 +35,7 @@ engineers who know how to build, operate, and govern modern AI systems.
 
 I intend to remain competitive and productive in this industry for another
 decade of high-impact work. To force the issue, I spent
-[$5,000 of my own capital on an ASUS Ascent GX10 workstation](https://showmetheinference.com/posts/why-i-spent-5000-on-hardware-instead-of-tokens/).
+[$5,000 of my own money on an ASUS Ascent GX10 workstation](https://showmetheinference.com/posts/why-i-spent-5000-on-hardware-instead-of-tokens/).
 That machine is my forcing function: it compels me to master AI systems
 engineering in a budgeted, disciplined, and realistic environment to solve real
 problems. Most of the immediate problems I tackle will be code-centric, but AI
