@@ -40,10 +40,10 @@ Authority:       Commander's Directive (MCTP 3-30A / MCWP 5-10)
    kubectl apply -f rigs/suitcase-ai/provision/k8s/apps/inference/benchmarks/llama-benchy-job.yaml
    ```
 3. Harvest and package all required benchmark outputs:
-   - Extract `/tmp/results.csv` from the benchmark pod.
+   - Extract `/tmp/results.csv`, `/tmp/submission_answers.json`, and `/tmp/submission_answers.md` from the benchmark pod.
    - Pair with authoritative declarative recipe ([`rigs/suitcase-ai/provision/k8s/apps/inference/recipes/nemotron-49b-fp8.yaml`](../../suitcase-ai/provision/k8s/apps/inference/recipes/nemotron-49b-fp8.yaml)).
    - Scrape bracketed Prometheus/DCGM timeseries for the run window into `telemetry.json` via Grafana Datasource Proxy (`/api/datasources/proxy/1`).
-   - Compile the **Spark Arena Local Review Dossier** (`local_review_dossier.md`) incorporating telemetry tables and arena comparisons.
+   - Compile the **Spark Arena Local Review Dossier** (`dossier.md` / `local_review_dossier.md`) incorporating telemetry tables and arena comparisons.
 4. Submit Completed Staff Work directly to Command via `gc mail send cos`.
 
 ### B. Platform Chief (`colt-sysadmin`) — Platform SRE
@@ -61,12 +61,14 @@ Authority:       Commander's Directive (MCTP 3-30A / MCWP 5-10)
 
 ## 4. Mandatory Run Procedure & Standardized Output Manifest
 
-All current and future Spark Arena benchmark executions must automatically scrape, structure, and preserve the following four mandatory artifacts within the target benchmark directory (e.g. `rigs/colt-results/benchmarks/spark-arena/`):
+All current and future Spark Arena benchmark executions must automatically scrape, structure, and preserve the following six mandatory artifacts within the target benchmark directory (e.g. `rigs/colt-results/benchmarks/models/<vendor>/<model>/<config>/spark-arena/<run-id>/`):
 
 1. **`results.csv`**: Official Spark Arena CSV output (`model`, `latency_sec`, `prompt_tokens`, `completion_tokens`, `tps`).
 2. **`recipe.yaml`**: Complete declarative `SparkRecipe` manifest matching physical hardware, runtime flags, and memory clamping.
 3. **`telemetry.json`**: Pure bracketed Prometheus/DCGM timeseries capture (GPU utilization, power usage watts, core temperature, KV cache factor) across the run window.
-4. **`local_review_dossier.md`**: Executive staff evaluation and comparative analysis referencing the complete artifact package.
+4. **`submission_answers.json`**: Machine-readable standardized submission form answers pre-populating all Spark Arena admin/portal fields.
+5. **`submission_answers.md`**: Human-readable standardized form submission reference sheet.
+6. **`dossier.md`** (or `local_review_dossier.md`): Executive staff evaluation and comparative analysis referencing the complete artifact package.
 - **Reporting**: S-3 submits Completed Staff Work upon job completion.
 
 Regards,  
