@@ -1,18 +1,19 @@
 # Standard Operating Procedure: Repository & Supply Depot Provisioning
 
-**Document ID:** `SOP-4.1-REPO-PROVISION`  
-**Effective Date:** September 22, 2026  
-**Lead Action Officer:** S-4 Logistics (`s4-logistics`), Camp Colt  
-**Reviewing Authority:** Chief of Staff (`colt-cos`), Camp Colt  
-**Doctrine Standard:** USMC Staff Organization (MCRP 3-10A.1) & Completed Staff Work (MCTP 3-30A)  
+**Document ID:** `SOP-4.1-REPO-PROVISION`
+**Effective Date:** September 22, 2026
+**Lead Action Officer:** S-4 Logistics (`s4-logistics`), Camp Colt
+**Reviewing Authority:** Chief of Staff (`colt-cos`), Camp Colt
+**Doctrine Standard:** USMC Staff Organization (MCRP 3-10A.1) & Completed Staff Work (MCTP 3-30A)
 
 ---
 
 ## 1. Purpose & Doctrinal Authority
 
-Under Camp Colt doctrine (established in `AGENTS.md` and `SOP-0.2-WATCH-POSTURE`), Git repositories are classified as **Logistics Supply Depots (Class IX/VII digital material)**. 
+Under Camp Colt doctrine (established in `AGENTS.md` and `SOP-0.2-WATCH-POSTURE`), Git repositories are classified as **Logistics Supply Depots (Class IX/VII digital material)**.
 
 The S-4 Logistics Officer (`s4-logistics`) holds sole administrative cognizance over:
+
 1. Requisition intake and inventory tracking for all code depots under the `colt/` organization.
 2. Creation, sizing, and configuration of remote repositories on in-cluster Gitea (`gitea.colt.chalko.com`).
 3. Setting repository access policies, branch protection rules, and upstream synchronization mirrors.
@@ -41,14 +42,17 @@ Platform SRE (`colt-sysadmin`) maintains the underlying Gitea K8s pod/storage cl
 ```
 
 ### Step 1: Requisition Intake
+
 Requisitions arrive via `gc mail` from S-3 Operations (tactical requirement) or Chief of Staff (strategic directive). Requisitions must specify:
-* **Repository Name:** e.g., `colt/a-staff.git`
-* **Rig Prefix:** 2-3 character identifier (e.g., `as`)
-* **Description:** Purpose and scope
-* **Default Branch:** Standard is `main`
-* **Access Level:** Internal (authenticated agents) vs. Public mirror
+
+- **Repository Name:** e.g., `colt/a-staff.git`
+- **Rig Prefix:** 2-3 character identifier (e.g., `as`)
+- **Description:** Purpose and scope
+- **Default Branch:** Standard is `main`
+- **Access Level:** Internal (authenticated agents) vs. Public mirror
 
 ### Step 2: Gitea API Execution
+
 S-4 executes depot creation using the scoped Gitea token (`repo:*`, `org:read`):
 
 ```bash
@@ -69,18 +73,22 @@ curl -s -X POST "http://gitea.colt.chalko.com:3000/api/v1/orgs/colt/repos" \
 ```
 
 ### Step 3: Team Permissions & Branch Protection
+
 1. Assign read/write permissions to the `Colt Agents` team.
 2. Enable branch protection on `main` (requiring PR review and zero failed automated checks for production rigs).
 
 ### Step 4: Empirical Preflight Verification
+
 Before handing off the depot, S-4 must empirically verify SSH transport and repository reachability:
 
 ```bash
 git ls-remote ssh://git@gitea.colt.chalko.com:30222/colt/<repo-name>.git
 ```
-*Verification criteria:* Must exit code 0 and list `refs/heads/main`.
+
+_Verification criteria:_ Must exit code 0 and list `refs/heads/main`.
 
 ### Step 5: Depot Delivery & Handoff
+
 S-4 sends a completion dispatch with `--notify` to both S-3 Operations and the Mayor:
 
 ```bash

@@ -10,3 +10,6 @@
 .beads/*
 !.beads/identity.toml
 
+# OpenCode runtime
+.opencode/
+
