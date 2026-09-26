@@ -118,9 +118,12 @@ flowchart TD
    - Use `gc mail ... --notify` strictly for active operational taskers, directives, and blocker escalations to wake the recipient immediately.
    - Omit `--notify` for informational, future-planning, or retrospective traffic (e.g. `AAR item: ...`).
    - Zero intermediate acknowledgment ("ACK") mails; staff officers report back upon task completion with full receipts.
-3. **Zero-Dirty-Git Exit Gate:**
-   - Under `cc-kw0`, all active repositories (`camp-colt`, `a-staff`, `colt-results`, `colt-utils`, `go_template_rule`, `suitcase-ai`) were reconciled to 100% clean working trees with pre-commit passing cleanly.
-   - Staff officers and tactical workers must enforce `git status --porcelain == 0` as a mandatory exit condition before closing any bead or submitting a pull request.
+3. **Zero-Dirty-Git Exit Gate & Worktree Cleanliness (SOP-0.3-WORKTREE-CLEANLINESS):**
+   - Under `cc-kw0` and `cc-nqpv`, all active repositories (`camp-colt`, `a-staff`, `colt-results`, `colt-utils`, `go_template_rule`, `suitcase-ai`) were codified into a **Four-Tier Worktree & Working Tree Cleanliness Defense Architecture** ([`battlebook/SOP_GIT_WORKTREE_CLEANLINESS.md`](file:///home/camp-colt-mayor-agent/colony/rigs/a-staff/battlebook/SOP_GIT_WORKTREE_CLEANLINESS.md)):
+     - **Tier 1 (Tactical Worker Clean-Exit Gate):** Tactical workers and polecats must enforce `git status --porcelain == 0` and prune any secondary worktrees before closing any task bead. Stale runtime scratch is removed or added to `.gitignore`.
+     - **Tier 2 (Scripted Worktree Lifecycle & Trap Discipline):** Automation scripts dynamically creating git worktrees must register POSIX EXIT/INT/TERM traps to deterministically remove worktree directories, prune worktree references, and delete temporary branches.
+     - **Tier 3 (Turnkey Municipal Audit Tooling):** The Mayor and watch officers run [`scripts/audit_git_cleanliness.sh`](file:///home/camp-colt-mayor-agent/colony/scripts/audit_git_cleanliness.sh) across colony root and all mounted rigs, verifying 0 dirty files and 0 extra worktrees.
+     - **Tier 4 (Watch Cadence & Shift Handoff Discipline):** Git cleanliness is certified in every shift handoff dispatch (`gc mail`), confirmed in daily 06:00 CUB documents, and audited during Friday retrospectives.
 
 ---
 
@@ -133,3 +136,4 @@ flowchart TD
 | **ACT-03** | Maintain Grafana render timeout configurations ($\ge 60\text{s}$) on Envoy route                  |    Platform SRE     |    `cc-123q`     | COMPLETED |
 | **ACT-04** | Track 90-day GitHub PAT mirror expiration schedule and notify Command at $+75\text{d}$            |    S-1 Personnel    |     `cc-agw`     |  ACTIVE   |
 | **ACT-05** | Enforce pre-commit passing cleanly across all rigs on every PR                                    | All Staff / Workers |     `cc-kw0`     | ENFORCED  |
+| **ACT-06** | Formalize Git Worktree & Working Tree Cleanliness SOP and deploy municipal audit script           |     Mayor / S-3     |    `cc-nqpv`     | CODIFIED  |
