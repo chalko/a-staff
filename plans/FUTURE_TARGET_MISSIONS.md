@@ -23,21 +23,21 @@ All missions across Camp Colt serve a dual purpose mandated by the **Commander's
 Per the Commander's core doctrine:
 
 - **Empirical Receipts Over Assertions**: No marketing fluff; every claim is proven with Grafana timeseries, DCGM silicon thermals, vLLM engine histograms, and verified test suites.
-- **Zero Agent Ghostwriting**: Staff plans, benchmarks, and captures raw telemetry dossiers; the Commander infuses his 18-year Google distributed systems perspective and personal voice into every published dispatch.
+- **Zero Agent Ghostwriting**: Every public dispatch originates strictly in the Commander's authentic voice. Staff focuses exclusively on operational execution, benchmarking, and capturing verifiable technical receipts.
 
 ---
 
 ## II. Master Target Missions Matrix
 
-| Mission ID | Mission Codename                 | Strategic Pillar            | Target Hardware & Model                                       | Primary Empirical Receipts                                       | Blog Post Title & Theme                                                                           | Status / Bead                                                             |
-| :--------- | :------------------------------- | :-------------------------- | :------------------------------------------------------------ | :--------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------ |
-| **MSN-01** | **The Reasoning Tax**            | Inference Engineering       | GB10 UMA<br>`nemotron-49b`                                    | Latency breakdown, TTFT, token delta, code pass rate             | _When Thinking Hurts: Benchmarking Reasoning Effort and Tool Calling Latency on Local 49B Models_ | **Active**<br>[`cc-4466`](file:///home/camp-colt-mayor-agent/colony) (P1) |
-| **MSN-02** | **The 128G UMA Arena**           | Inference Engineering       | GB10 UMA<br>`nemotron-49b` vs `qwen-32b` vs `deepseek-r1-32b` | Peak TPS, prefill speed, KV cache footprint, thermal slope       | _Battle of the Local Titans: 32B vs 49B vs 70B on 128GB Unified Memory_                           | **Planned**<br>Phase 2 Baseline                                           |
-| **MSN-03** | **The Cache Hit Mirage**         | Inference Engineering       | GB10 UMA<br>vLLM Radix Engine                                 | Radix prefix hit %, memory fragmentation, inter-agent latency    | _Why Your Multi-Agent Swarm Is Busting the KV Cache (And How to Fix It)_                          | **Planned**                                                               |
-| **MSN-04** | **C2 for Agent Swarms**          | Deterministic Orchestration | Multi-node Gas City<br>Staff billets                          | Watchstander event loops, zero-polling receipts, zero-thrash AAR | _Running AI Agent Swarms Like a Marine Combat Operations Center_                                  | **Underway**<br>Institutionalized                                         |
-| **MSN-05** | **The Sovereign Command Post**   | Sovereign Infrastructure    | Mini-Rack Proxmox<br>ASUS Ascent GX10                         | Zero-secret `/dev/shm`, Dolt immutable state, air-gap replay     | _Building a Sovereign 24/7 AI Command Post in a Suitcase_                                         | **Planned**<br>Horizon 3                                                  |
-| **MSN-06** | **The Hard Math of Sovereignty** | Systems Economics           | Kill-A-Watt PDU<br>DCGM Joules vs Cloud APIs                  | Watts/token, hardware payback curve, local vs API spend          | _Show Me the Receipts: The Real Cost-Per-Token of Local Silicon vs Cloud APIs_                    | **Planned**                                                               |
-| **MSN-07** | **Speculative Acceleration**     | Inference Engineering       | GB10 UMA<br>Target + Draft models                             | Acceptance rate %, decode acceleration factor, latency drop      | _Turbocharging Local Coding Agents: Speculative Decoding on Unified Memory_                       | **Backlog**                                                               |
+| Mission ID | Mission Codename                 | Strategic Pillar            | Target Hardware & Model                                       | Primary Empirical Receipts                                       | Status / Bead                                                             |
+| :--------- | :------------------------------- | :-------------------------- | :------------------------------------------------------------ | :--------------------------------------------------------------- | :------------------------------------------------------------------------ |
+| **MSN-01** | **The Reasoning Tax**            | Inference Engineering       | GB10 UMA<br>`nemotron-49b`                                    | Latency breakdown, TTFT, token delta, code pass rate             | **Active**<br>[`cc-4466`](file:///home/camp-colt-mayor-agent/colony) (P1) |
+| **MSN-02** | **The 128G UMA Arena**           | Inference Engineering       | GB10 UMA<br>`nemotron-49b` vs `qwen-32b` vs `deepseek-r1-32b` | Peak TPS, prefill speed, KV cache footprint, thermal slope       | **Planned**<br>Phase 2 Baseline                                           |
+| **MSN-03** | **The Cache Hit Mirage**         | Inference Engineering       | GB10 UMA<br>vLLM Radix Engine                                 | Radix prefix hit %, memory fragmentation, inter-agent latency    | **Planned**                                                               |
+| **MSN-04** | **C2 for Agent Swarms**          | Deterministic Orchestration | Multi-node Gas City<br>Staff billets                          | Watchstander event loops, zero-polling receipts, zero-thrash AAR | **Underway**<br>Institutionalized                                         |
+| **MSN-05** | **The Sovereign Command Post**   | Sovereign Infrastructure    | Mini-Rack Proxmox<br>ASUS Ascent GX10                         | Zero-secret `/dev/shm`, Dolt immutable state, air-gap replay     | **Planned**<br>Horizon 3                                                  |
+| **MSN-06** | **The Hard Math of Sovereignty** | Systems Economics           | Kill-A-Watt PDU<br>DCGM Joules vs Cloud APIs                  | Watts/token, hardware payback curve, local vs API spend          | **Planned**                                                               |
+| **MSN-07** | **Speculative Acceleration**     | Inference Engineering       | GB10 UMA<br>Target + Draft models                             | Acceptance rate %, decode acceleration factor, latency drop      | **Backlog**                                                               |
 
 ---
 
@@ -83,7 +83,6 @@ flowchart TD
   - Total token consumption (prefill vs generation).
   - First-pass compiler pass rate vs multi-turn feedback convergence rate.
   - GPU thermal and energy draw per successful turn.
-- **Blog Post Deliverable**: _When Thinking Hurts: Benchmarking Reasoning Effort and Tool Calling Latency on Local 49B Models_.
 
 ---
 
@@ -101,7 +100,6 @@ flowchart TD
 - **Empirical Receipts**:
   - Side-by-side Grafana wide-metrics dashboards.
   - Standardized benchmark scorecards across the `colt-utils` test harness.
-- **Blog Post Deliverable**: _Battle of the Local Titans: 32B vs 49B vs 70B on 128GB Unified Memory_.
 
 ---
 
@@ -116,7 +114,6 @@ flowchart TD
 - **Empirical Receipts**:
   - `vllm:prefix_cache_hit_rate` timeseries during active multi-agent slings.
   - Prefill duration comparisons with warm vs cold cache.
-- **Blog Post Deliverable**: _Why Your Multi-Agent Swarm Is Busting the KV Cache (And How to Fix It)_.
 
 ---
 
@@ -130,7 +127,6 @@ flowchart TD
 - **Empirical Receipts**:
   - Audit logs of zero infinite loops across 100+ executed task beads.
   - Session uptime, memory stability, and zero zombie process counts in Gas City.
-- **Blog Post Deliverable**: _Running AI Agent Swarms Like a Marine Combat Operations Center_.
 
 ---
 
@@ -145,7 +141,6 @@ flowchart TD
 - **Empirical Receipts**:
   - Network severance test: Sever upstream internet connection and execute full coding task cycle locally.
   - Cold-boot recovery time and cloud-init provisioning receipts.
-- **Blog Post Deliverable**: _Building a Sovereign 24/7 AI Command Post in a Suitcase_.
 
 ---
 
@@ -159,7 +154,6 @@ flowchart TD
 - **Empirical Receipts**:
   - Joules per generated token.
   - Total Monthly Cost curve as a function of swarm token volume.
-- **Blog Post Deliverable**: _Show Me the Receipts: The Real Cost-Per-Token of Local Silicon vs Cloud APIs_.
 
 ---
 
@@ -169,28 +163,27 @@ flowchart TD
 - **Hardware Sympathy**:
   - UMA allows both target and draft model weights to reside in high-speed unified memory without PCIe transfer bottlenecks.
   - Measure acceptance rates and verify that speculative drafting introduces zero degradation in code compilation pass rates.
-- **Blog Post Deliverable**: _Turbocharging Local Coding Agents: Speculative Decoding on Unified Memory_.
 
 ---
 
 ## IV. Execution Sequence & Battle Rhythm
 
 ```text
-MSN-01 (Nemotron Effort Levers)  ──►  Blog Post #2
+MSN-01 (Nemotron Effort Levers)  ──►  Receipt Dossier #1
       │
       ▼
-MSN-02 (128G UMA Model Arena)    ──►  Blog Post #3
+MSN-02 (128G UMA Model Arena)    ──►  Receipt Dossier #2
       │
       ▼
-MSN-04 (Military Swarm C2)       ──►  Blog Post #4
+MSN-04 (Military Swarm C2)       ──►  Receipt Dossier #3
       │
       ▼
-MSN-06 (Empirical Silicon TCO)   ──►  Blog Post #5
+MSN-06 (Empirical Silicon TCO)   ──►  Receipt Dossier #4
 ```
 
 Every mission follows the four-step production gate:
 
 1. **Empirical Execution**: Task beads executed by S-3 / Platform SRE / Polecats with raw telemetry.
 2. **Staff AAR & Synthesis**: Technical dossier compiled in `rigs/a-staff/plans/`.
-3. **Article Skeleton**: Chief of Staff prepares structured outline with embedded Grafana charts.
-4. **Commander Publication**: Commander reviews, infuses his authentic voice, and publishes to `showmetheinference.com`.
+3. **Receipt Package**: Chief of Staff prepares structured telemetry package with embedded Grafana charts.
+4. **Commander Publication**: Commander authors and publishes the essay to `showmetheinference.com` in his authentic voice.
