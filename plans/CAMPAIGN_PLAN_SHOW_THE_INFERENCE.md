@@ -1,13 +1,15 @@
 # Campaign Plan: Operation "Show Me the Inference"
 
-```
-Document ID:     OPLAN-COLT-2026-SHOW-THE-INFERENCE
-Classification:  UNCLASSIFIED / STRATEGIC PORTFOLIO BLUEPRINT
-Commander:       Nick Chalko
-Facilitator:     Chief of Staff (`colt-cos`), Camp Colt
-Doctrinal Ref:   MCDP 1 (Warfighting), MCDP 1-0 (Operations), MCTP 3-30A (Command & Staff Action)
-Master Brand:    Show Me the Inference (`https://showmetheinference.com`)
-Target Cluster:  Camp Colt Sovereign AI Command Post & Suitcase AI Mini-Rack
+```text
+Document ID:        OPLAN-COLT-2026-SHOW-THE-INFERENCE
+Classification:     UNCLASSIFIED / STRATEGIC PORTFOLIO BLUEPRINT
+Commander:          Nick Chalko
+Upstream Authority: STRATDIR-THEATER-2026-SHOW-THE-INFERENCE (https://london.fog.chalko.com/Chalko/strategic-plans/src/branch/main/plans/THEATER_STRATEGY_SHOW_THE_INFERENCE.md)
+Strategic Lead:     Margaret "Peggy" Carter (`strategic-plans/peggy` — Strategic Theater Director)
+Operational Lead:   General Dwight D. "Ike" Eisenhower (`colt-cos` — Mayor / Executive Officer, Camp Colt)
+Doctrinal Ref:      MCDP 1 (Warfighting), MCDP 1-0 (Operations), MCTP 3-30A (Command & Staff Action)
+Master Brand:       Show Me the Inference (`https://showmetheinference.com`)
+Target Cluster:     Camp Colt Sovereign AI Command Post & Suitcase AI Mini-Rack
 ```
 
 ---
@@ -215,7 +217,25 @@ gantt
 
 ---
 
-## V. Staff Section Cognizance for the Campaign
+## V. Doctrinal Command Hierarchy & Division of Command
+
+As established in Theater Strategic Directive [STRATDIR-THEATER-2026-SHOW-THE-INFERENCE](https://london.fog.chalko.com/Chalko/strategic-plans/src/branch/main/plans/THEATER_STRATEGY_SHOW_THE_INFERENCE.md) (Section IV), command authority is distributed across three echelons:
+
+1. **Strategic Theater Oversight (Director Peggy Carter / `strategic-plans`)**:
+   - Maintains theater-level intent, brand positioning (`showmetheinference.com`), cross-town coordination (Laptop Town, Luna, Camp Colt), and architectural invariants.
+   - Defines acceptance criteria and issues Strategic Directives / WARNORDs for candidate missions in the [Theater Mission & Target Registry](https://london.fog.chalko.com/Chalko/strategic-plans/src/branch/main/plans/THEATER_MISSION_AND_TARGET_REGISTRY.md).
+   - Evaluates operational AARs against the strategic mission.
+2. **Operational Command (General Dwight D. "Ike" Eisenhower / `colt-cos` & `a-staff`)**:
+   - Translates upstream strategic directives into the operational campaign plan (`CAMPAIGN_PLAN_SHOW_THE_INFERENCE.md`).
+   - Mobilizes Camp Colt staff sections to execute benchmarks, manage watch postures, and collect data.
+   - Enforces the Completed Staff Work standard across all subordinate deliverables and fact sheets.
+3. **Commander & Executive Author (Nick Chalko)**:
+   - Holds final publication authority.
+   - Infuses his 18-year Google systems perspective, narrative voice, and architectural insight into the empirical fact sheets assembled by the staff.
+
+---
+
+## VI. Staff Section Cognizance for the Campaign
 
 | Staff Section                        | Campaign Cognizance & Deliverable Responsibilities                                                                                                 |
 | :----------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -230,7 +250,7 @@ gantt
 
 ---
 
-## VI. Commander's Guidance & Operational Cadence
+## VII. Commander's Guidance & Operational Cadence
 
 - **Publication Rhythm:** Weekly deep-dive technical essays on `showmetheinference.com` during the active campaign; transitioning to at least once a month following employment transition.
 - **Focus on Ground Truth:** Every essay must be anchored in empirical receipts—reproducible configs, raw timeseries telemetry, and verified code execution rather than abstract speculation.
