@@ -119,6 +119,12 @@ Worker node `talos-hwe-yok` was severely undersized (6 GiB) for hosting the enti
 
 During the Unit 4 stall, the Chief of Staff directly edited source files and closed beads. This violated MCTP 3-30A standards. Tactical repairs belong to S-3 and tactical workers; CoS must maintain operational oversight without performing tactical code manipulation.
 
+### 4.4 Municipal & Rig Lifecycle Command Boundaries: The Mayor Does Gas City-Wide and Rig Changes
+
+The unintended shutdown of the entire Camp Colt command post at 09:39 PDT was triggered directly by the Chief of Staff attempting to execute `gc stop --rig gascity` from the command line. In Gas City, `gc stop` is not a rig-scoped command; it stops the entire city controller and Dolt server.
+
+**The Doctrinal Lesson:** All Gas City-wide and rig-level lifecycle changes (`gc stop`, `gc start`, `gc restart`, `gc rig suspend`, `gc rig resume`, `gc reload`) belong **strictly and exclusively to the Mayor (`mayor`)**. Operational staff billets (including CoS and S-3) must **NEVER directly execute city or rig lifecycle commands**. If a rig must be paused or resumed, CoS must task the Mayor via `gc mail` (`gc mail send mayor -s "TASKING: Suspend gascity rig" ...`), ensuring that municipal plumbing commands are executed with domain competence and zero collateral disruption.
+
 ---
 
 ## 5. Corrective Action Plan & Remediations
@@ -132,6 +138,7 @@ During the Unit 4 stall, the Chief of Staff directly edited source files and clo
 | **5. Worker Frontmatter Validation Pre-Flight Hook** |  `s3-operations`   |   48 Hours    | Pre-commit hook in `rigs/gascity` to enforce lowercase keys and header syntax prior to summary submission.                |
 | **6. Standardize Multi-Agent Staff Action SOP**      |     `colt-cos`     | **COMPLETED** | Codified in `rigs/a-staff/directives/SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md`. Eliminates ghostwriting across all billets.   |
 | **7. Proxmox Worker VM Memory Expansion**            |  `colt-sysadmin`   |  Next Window  | Expand `talos-hwe-yok` VM RAM from 6 GiB to 16 GiB on Proxmox VE.                                                         |
+| **8. Enforce Mayor Exclusive Lifecycle Authority**   |  `colt-cos` / All  | **COMPLETED** | Codified in `AGENTS.md`. CoS/S-3 strictly prohibited from invoking `gc stop`/`gc rig ...`; all changes tasked to Mayor.   |
 
 ---
 
