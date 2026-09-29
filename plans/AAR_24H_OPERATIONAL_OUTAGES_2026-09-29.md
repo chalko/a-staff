@@ -95,6 +95,14 @@ _(Extracted verbatim from S-6 Report `cc-wisp-usf5f`)_
 - **Out-of-Band Raw Scraping Invariant:** S-6 established emergency procedure to scrape vLLM directly (`http://10.82.0.3:8000/metrics`) and LiteLLM (`http://colt-gw-01:4000/metrics`) via CLI/curl during monitoring outages.
 - **Jump CP Network Inversion:** Validated that server push across residential NAT is doctrinally flawed. Codified the client-initiated pull/push transport model as the sole approved standard in `PLAN-CC-JUMP-CP-S4A-001`.
 
+### 3.4 Mayor: Municipal ACP Process Reaping & Host Stability
+
+_(Extracted verbatim from Mayor Report `cc-wisp-jypdq`)_
+
+- **Zombie Process Accumulation:** Identified that `gascity-supervisor.service` runs with `KillMode=process`, allowing orphaned `opencode` worker processes to remain attached to `user-1000.slice` after session termination. 29 lingering processes drew >5 GB RAM and 240+ tasks.
+- **Automated Process Reaper:** Implemented PID-to-session reconciliation in `scripts/municipal_hygiene.sh`, inspecting `/proc/$pid/environ` for `GC_SESSION_ID` against live `gc session list`. Reaps unattached or dead sessions via SIGTERM/SIGKILL.
+- **5-Minute Watchdog (`colt-hygiene.timer`):** Activated recurring 5-minute systemd timer executing lease reclamation (`bd reclaim --older-than 5m`), dormant session pruning, and zombie process cleanup (commit `18a27c6`). Reclaimed memory to 6.9 GiB available.
+
 ---
 
 ## 4. Root Cause Breakdown & Doctrinal Lessons Learned
@@ -118,11 +126,12 @@ During the Unit 4 stall, the Chief of Staff directly edited source files and clo
 | Action Item                                          | Responsible Billet |   Timeline    | Target Outcome                                                                                                            |
 | :--------------------------------------------------- | :----------------: | :-----------: | :------------------------------------------------------------------------------------------------------------------------ |
 | **1. `colt-hq` 8 GiB Swapfile Activation**           |  `colt-sysadmin`   | **COMPLETED** | 8 GiB swap partition activated and verified on `colt-hq` (`swapon --show`). Absorbs transient fan-out memory spikes.      |
-| **2. Municipal ACP Process & Lease Reaper**          |      `mayor`       |   24 Hours    | Recurring 5-minute cron executing `gc bd reclaim --older-than 5m` and terminating orphaned `opencode acp` processes.      |
-| **3. Prometheus QoS Elevation to Burstable**         |  `colt-sysadmin`   |   24 Hours    | Patch `kube-prometheus-stack` values with 1.5 GiB request / 3.0 GiB limit to protect monitoring from kernel OOM eviction. |
-| **4. Worker Frontmatter Validation Pre-Flight Hook** |  `s3-operations`   |   48 Hours    | Pre-commit hook in `rigs/gascity` to enforce lowercase keys and header syntax prior to summary submission.                |
-| **5. Standardize Multi-Agent Staff Action SOP**      |     `colt-cos`     | **COMPLETED** | Codified in `rigs/a-staff/directives/SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md`. Eliminates ghostwriting across all billets.   |
-| **6. Proxmox Worker VM Memory Expansion**            |  `colt-sysadmin`   |  Next Window  | Expand `talos-hwe-yok` VM RAM from 6 GiB to 16 GiB on Proxmox VE.                                                         |
+| **2. Municipal ACP Process & Lease Reaper**          |      `mayor`       | **COMPLETED** | Automated 5-minute watchdog (`colt-hygiene.timer`) active; reaps orphaned `opencode` processes (commit `18a27c6`).        |
+| **3. `colt-hq` Systemd Cgroup Ceilings**             |  `colt-sysadmin`   | **COMPLETED** | Enforced `MemoryHigh=8G`, `MemoryMax=9G`, `TasksMax=4096` in `user-1000.slice.d/override.conf`.                           |
+| **4. Prometheus QoS Elevation to Burstable**         |  `colt-sysadmin`   |   24 Hours    | Patch `kube-prometheus-stack` values with 1.5 GiB request / 3.0 GiB limit to protect monitoring from kernel OOM eviction. |
+| **5. Worker Frontmatter Validation Pre-Flight Hook** |  `s3-operations`   |   48 Hours    | Pre-commit hook in `rigs/gascity` to enforce lowercase keys and header syntax prior to summary submission.                |
+| **6. Standardize Multi-Agent Staff Action SOP**      |     `colt-cos`     | **COMPLETED** | Codified in `rigs/a-staff/directives/SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md`. Eliminates ghostwriting across all billets.   |
+| **7. Proxmox Worker VM Memory Expansion**            |  `colt-sysadmin`   |  Next Window  | Expand `talos-hwe-yok` VM RAM from 6 GiB to 16 GiB on Proxmox VE.                                                         |
 
 ---
 
@@ -130,9 +139,10 @@ During the Unit 4 stall, the Chief of Staff directly edited source files and clo
 
 In compliance with `SOP-ASTAFF-CSW-001`, this document is based strictly on verified `gc mail` traffic:
 
-- [x] **Platform Chief (`colt-sysadmin`):** Concurred via message `cc-wisp-9ud0g` & committed AAR `docs/AAR_2026-09-29_WORKER_MEMORY_EXHAUSTION.md`.
+- [x] **Platform Chief (`colt-sysadmin`):** Concurred via message `cc-wisp-9ud0g` (`docs/AAR_2026-09-29_WORKER_MEMORY_EXHAUSTION.md`) & `cc-wisp-yc7uh` (`docs/AAR_2026-09-29_COLT_HQ_FORENSIC_AUDIT.md`).
 - [x] **S-3 Operations (`s3-operations`):** Concurred via message `cc-wisp-mei9v`.
 - [x] **S-6 Signal (`s6-signal`):** Concurred via message `cc-wisp-usf5f`.
+- [x] **Mayor (`mayor`):** Concurred via message `cc-wisp-jypdq`.
 - [x] **Chief of Staff (`colt-cos`):** Consolidated and certified per MCTP 3-30A standards.
 
 Submitted for Commander's final review.
