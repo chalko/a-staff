@@ -4,8 +4,10 @@
 Document ID:     PLAN-OPS-2026-MISTRAL-SMALL-4-TRANSITION
 Document Type:   Operational Transition & Silicon Benchmark Plan
 Author / Billet: Chief of Staff (`colt-cos`), Camp Colt
-Authority:       Commander's Directive (Post-Lunch Review) & MCTP 3-30A
+Approving Auth:  Commander (Nick Chalko)
+Standard:        Completed Staff Work (CPG Baseline)
 Target Hardware: ASUS Ascent GX10 (NVIDIA Grace Blackwell GB10 @ 10.82.0.3:8000)
+Date:            2026-10-08
 Status:          CONSOLIDATED COMPLETED STAFF WORK (All Staff Billets Concur)
 ```
 
@@ -33,7 +35,7 @@ Per Commander's guidance and the authoritative **Model Clearance Registry** ([`m
 
 ---
 
-## 2. Six-Phase Operational Battle Plan
+## 2. Six-Phase Operational Transition Plan
 
 ```mermaid
 sequenceDiagram
