@@ -88,18 +88,48 @@ Camp Colt organizes all operational activity into three distinct, interconnected
 
 ### 2.3 Horizon 3: Fragmentary Order / FRAGO (Immediate Tactical Horizon: 1 to 24 Hours)
 
-- **Definition**: Rapid, intra-day operational directives that adjust active tactical execution without invalidating or rewriting the parent OPORD.
-- **Authority & Custody**: Issued by **S-3 Operations (`s3-operations`)** or the **Chief of Staff (`colt-cos`)**.
-- **Dispatch Mechanism**: Transmitted via high-priority mail with notification:
+**Definition**: Rapid, intra-day operational directives that adjust active tactical execution without invalidating or rewriting the parent OPORD.
+
+**Authority & Custody**: Issued by **S-3 Operations (`s3-operations`)** or the **Chief of Staff (`colt-cos`)**.
+
+**Low-Noise Execution Mechanics**: To prevent administrative sprawl, redundant beads, and unnecessary notification spam across the colony, FRAGOs strictly follow a bifurcated execution pattern:
+
+#### Pattern A: Intra-Task FRAGO (Course Correction on Existing Work)
+
+Used when refining scope, updating implementation details, providing targeted feedback, or clearing local obstacles on an already assigned bead.
+
+- **Zero New Beads / Zero Clutter**: Do **not** create a new bead or send extensive email threads.
+- **Dolt Bead Comment**: S-3 appends a formal, timestamped order directly to the existing bead:
 
   ```bash
-  gc mail send <recipient> -s "FRAGO <NUMBER> to OPORD <ID>: <SUBJECT>" -m "<DIRECTIVE>" --notify
+  bd comment <bead-id> "FRAGO <nn>: <specific adjustment or directive>"
   ```
 
-- **Mapping to System Tooling**:
-  - Directly modulates active task beads, priority escalations (e.g., P0/P1 blockers), or worker targeting parameters (`metadata."gc.routed_to"`).
-  - Used for blocker bypasses, unexpected regression mitigations, or targeted probe taskings.
-- **Lifecycle Bound**: Ephemeral; automatically retires upon completion and closure of the associated task bead.
+- **Session Nudge Alert**: S-3 immediately wakes and directs the assigned worker session:
+
+  ```bash
+  gc session nudge <worker-session> "FRAGO <nn> posted on <bead-id>: see bead comments"
+  ```
+
+- **Receipt & Audit Trail**: The complete chronological audit trail is preserved permanently in the bead's Dolt version history without generating orphaned task records or email clutter.
+
+#### Pattern B: Scope-Expanding FRAGO (New Workstream / Parallel Assignment)
+
+Used only when an intra-day event requires spinning up a new parallel line of effort or dispatching a separate, independent worker.
+
+- **Distinct Child Bead**: S-3 creates a distinct child bead attached directly to the governing parent Epic/Convoy:
+
+  ```bash
+  bd create --title "FRAGO <nn>: <Task Title>" --parent <epic-id> --assignee <worker>
+  ```
+
+- **High-Priority Mail Notification**:
+
+  ```bash
+  gc mail send <worker> -s "FRAGO <nn> to OPORD <id>: <Task Title>" -m "Assigned to bead <child-bead-id>. See details in bead." --notify
+  ```
+
+- **Lifecycle Bound**: Ephemeral; automatically retires upon test verification and closure of the associated task bead.
 
 ---
 
