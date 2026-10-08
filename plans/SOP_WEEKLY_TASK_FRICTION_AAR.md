@@ -2,10 +2,10 @@
 
 ```
 Document ID:     SOP-ASTAFF-OPS-002
-Classification:  CAMP COLT GARRISON DOCTRINE / UNCLASSIFIED
-Authority:       Chief of Staff Directive (cc-wisp-s05f) / MCTP 3-30A
+Document Type:   Standard Operating Procedure
+Authority:       Chief of Staff Directive (cc-wisp-s05f) / Completed Staff Work
 Lead Proponent:  S-3 Operations Officer (s3-operations), Camp Colt
-Target Audience: Battalion Staff (CoS, S-1, S-2, S-3, S-4, S-6), Platform Chief, Mayor
+Target Audience: Staff Billets (CoS, S-1, S-2, S-3, S-4, S-6), Platform Chief, Mayor
 Effective Date:  2026-09-23
 Review Cadence:  Weekly on Fridays (Submission NLT 1400 PDT)
 ```

@@ -2,9 +2,9 @@
 
 ```
 Document ID:     SPARKLEADER-COLT-NEMOTRON-49B
-Classification:  BATTALION STAFF / SOVEREIGN MODEL DOSSIER
-Author:          S-3 Operations Officer (s3-operations), Camp Colt
-Review Gate:     S-6 Signal & Cyber Officer (s6-signal), Chief of Staff (colt-cos)
+Document Type:   Model Specification & Evaluation Dossier
+Author / Billet: S-3 Operations Officer (s3-operations), Camp Colt
+Review Gate:     S-6 Signal (s6-signal), Chief of Staff (colt-cos)
 Authority:       PLN-0.1-BENCH-HIST / OPLAN-COLT-2026-09-01-LOCAL-MODELS (cc-32m)
 Date:            2026-09-22
 ```

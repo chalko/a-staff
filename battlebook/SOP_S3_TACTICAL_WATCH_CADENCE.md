@@ -1,8 +1,9 @@
 # SOP: S-3 Tactical Operations Watch Cadence & Stall Escalation Protocol
 
-**Doctrinal Authority:** Commander's Planning Guidance (CPG) / MCTP 3-30A
+**Document Type:** Standard Operating Procedure
+**Standard:** Completed Staff Work (CPG Baseline)
 **Custodian:** S-3 Operations (`s3-operations`)
-**Scope:** Camp Colt Virtual Combat Operations Center (COC) Watchstander Protocol
+**Scope:** Camp Colt Operations Watch Cadence & Protocol
 **Effective Date:** 2026-09-29
 
 ---

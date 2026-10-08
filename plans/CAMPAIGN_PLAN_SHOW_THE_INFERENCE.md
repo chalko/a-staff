@@ -2,7 +2,7 @@
 
 ```text
 Document ID:        OPLAN-COLT-2026-SHOW-THE-INFERENCE
-Classification:     UNCLASSIFIED / STRATEGIC PORTFOLIO BLUEPRINT
+Document Type:      Strategic Portfolio Blueprint
 Commander:          Nick Chalko
 Upstream Authority: STRATDIR-THEATER-2026-SHOW-THE-INFERENCE (https://london.fog.chalko.com/Chalko/strategic-plans/src/branch/main/plans/THEATER_STRATEGY_SHOW_THE_INFERENCE.md)
 Strategic Lead:     Margaret "Peggy" Carter (`strategic-plans/peggy` — Strategic Theater Director)

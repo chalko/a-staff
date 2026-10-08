@@ -2,7 +2,7 @@
 
 ```text
 Document ID:     SOP-0.3-WORKTREE-CLEANLINESS
-Classification:  UNCLASSIFIED / GARRISON SOP
+Document Type:   Standard Operating Procedure
 Effective Date:  September 26, 2026
 Lead Billets:    Mayor (Headquarters Commandant) & S-3 Operations
 Reviewing Auth:  Chief of Staff (`colt-cos`), Camp Colt

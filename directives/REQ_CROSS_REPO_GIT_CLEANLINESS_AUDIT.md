@@ -2,7 +2,7 @@
 
 ```text
 Document ID:     REQ-S6-GIT-AUDIT-2026-09-26
-Classification:  UNCLASSIFIED / STAFF DIRECTIVE
+Document Type:   Staff Requirements Directive
 Tasking Billets: Chief of Staff (`colt-cos`) to S-6 Signal (`s6-signal`)
 Implementation:  rigs/colt-utils (via Ephemeral Tactical Workers)
 Doctrine Ref:    USMC Staff Organization (MCRP 3-10A.1) & Completed Staff Work (MCTP 3-30A)

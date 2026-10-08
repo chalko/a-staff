@@ -3,7 +3,7 @@
 ```
 Document ID:     FRAGO-COLT-2026-09-24-02-SPARK-ARENA
 Base Order:      OPLAN-COLT-2026-09-01-LOCAL-MODELS (Epic cc-32m)
-Classification:  CAMP COLT SOVEREIGN APPLIANCE OPERATIONAL DIRECTIVE
+Document Type:   Operational Task Directive
 Author:          Chief of Staff (cos), Camp Colt
 Coordinating:    S-3 Operations (s3-operations), Platform Chief (colt-sysadmin), S-6 Signal (s6-signal)
 Target Enclave:  ASUS Ascent GX10 (NVIDIA Grace Blackwell GB10 @ 10.82.0.3 / colt-gpu-01)

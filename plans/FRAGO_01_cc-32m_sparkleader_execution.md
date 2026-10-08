@@ -3,7 +3,7 @@
 ```
 Document ID:     FRAGO-COLT-2026-09-24-01-SPARKLEADER
 Base Order:      OPLAN-COLT-2026-09-01-LOCAL-MODELS (Epic cc-32m)
-Classification:  CAMP COLT SOVEREIGN APPLIANCE OPERATIONAL DIRECTIVE
+Document Type:   Operational Task Directive
 Author:          S-3 Operations Officer (s3-operations)
 Approving Auth:  Chief of Staff (cos), Camp Colt
 Coordinating:    Platform Chief (colt-sysadmin), S-6 Signal (s6-signal), S-4 Logistics
