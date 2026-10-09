@@ -17,7 +17,9 @@
 
 In accordance with the Commander's Planning Guidance (CPG) and MCTP 3-30A (_Command and Staff Action_), Camp Colt enforces continuous, empirical oversight of all active operational tasks. Autonomous multi-agent swarms and tactical workers frequently encounter silent stalls, compilation loops, parsing timeouts, or unmonitored crash loops.
 
-This SOP codifies the **Operations Watch Patrol Protocol** and establishes the generic Gas City scheduled order [`orders/operations_watch.toml`](../../orders/operations_watch.toml) to systematically inspect active beads, audit inter-staff communications, maintain structured state tracking across watch intervals, detect stagnation, delegate intervention to assigned staff officers, and escalate unresolvable friction to Command.
+This SOP codifies the **Operations Watch Patrol Protocol** and establishes the generic Gas City scheduled order [`orders/operations_watch.toml`](../../orders/operations_watch.toml) to systematically inspect active beads, maintain structured state tracking across watch intervals, detect worker stagnation, delegate intervention to assigned staff officers, and escalate unresolvable friction to Command.
+
+_(Note: Inter-staff communications watch and priority delivery are strictly the cognizance of S-6 Signal governed under [`SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md`](SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md).)_
 
 ---
 
@@ -36,60 +38,35 @@ _Note: Changes to the active cadence interval are municipal lifecycle operations
 
 ---
 
-## 3. The 6-Step Watch Protocol
+## 3. The 5-Step Watch Protocol
 
-At each scheduled tick of the operations watch, the watchstander (or automated patrol script [`commands/operations_watch.sh`](../../commands/operations_watch.sh)) executes six sequential inspection phases:
+At each scheduled tick of the operations watch, the watchstander (or automated patrol script [`commands/operations_watch.sh`](../../commands/operations_watch.sh)) executes five sequential inspection phases:
 
 ```mermaid
 flowchart TD
-    A[Tick: operations_watch] --> B[Phase 0A: Inbound Mail Triage]
-    B --> C[Phase 0B: Peer Staff Unread Mail Patrol]
-    C --> D[Phase 1: Active Bead & Sub-Bead Tree Audit]
-    D --> E[Phase 2: State Tracking & Delta Check]
-    E -- Normal Progress --> F[Update State Ledger & Remain Silent]
-    E -- 1-2 Stalls Detected --> G[Phase 3: Immediate Staff Delegation]
-    G --> H[gc session peek on active worker]
-    H --> I[gc mail ... --notify Assigned Staff Officer]
-    E -- 4 Stalls / Completion / Blocker --> J[Phase 4: Command Escalation]
-    J --> K[gc mail cos ... --notify]
+    A[Tick: operations_watch] --> B[Phase 0: Mandatory Inbound Mail Triage]
+    B --> C[Phase 1: Active Bead & Sub-Bead Tree Audit]
+    C --> D[Phase 2: State Tracking & Delta Check]
+    D -- Normal Progress --> E[Update State Ledger & Remain Silent]
+    D -- 1-2 Stalls Detected --> F[Phase 3: Immediate Staff Delegation]
+    F --> G[gc session peek on active worker]
+    G --> H[gc mail ... --notify Assigned Staff Officer]
+    D -- 4 Stalls / Completion / Blocker --> I[Phase 4: Command Escalation]
+    I --> J[gc mail cos ... --notify]
 ```
 
-### Phase 0A: Mandatory Inbound Mail Triage
+### Phase 0: Mandatory Inbound Mail Triage
 
 > [!IMPORTANT] > **Every watch cycle MUST begin with reading and processing all unread mail.**
 >
 > The watchstander executes:
 >
 > ```bash
-> gc mail inbox --json --json
+> gc mail inbox --json
 > gc mail read <message-id>
 > ```
 >
 > All directives, technical receipts, staff updates, and blocker escalations received since the prior watch cycle are triaged and logged before evaluating task progress.
-
-### Phase 0B: Peer Staff Unread Mail Patrol & Unread Nudge
-
-> [!TIP] > **Staff Communication Latency Circuit-Breaker:**
-> Cross-staff coordination fails when critical orders or review requests sit unread in peer staff inboxes.
->
-> 1. The watchstander inspects unread mail across core billets:
->
->    ```bash
->    gc mail inbox --json mayor
->    gc mail inbox --json s6-signal
->    gc mail inbox --json colt-sysadmin
->    gc mail inbox --json s1-personnel
->    gc mail inbox --json s4-logistics
->    ```
->
-> 2. **Unread Nudge Criterion**: If a message has sat unread in a staff officer's inbox for **more than one (1) watch cycle** (tracked in the state ledger):
->
->    - The watchstander executes `gc mail peek <message-id>` to inspect the pending subject and urgency.
->    - Dispatches a high-priority nudge via session command:
->
->      ```bash
->      gc session nudge <session-id> "Unread mail <message-id> ('<subject>') has been pending in your inbox for >1 watch cycle. Check and process via gc mail read."
->      ```
 
 ### Phase 1: Active Bead & Sub-Bead Tree Audit
 
@@ -126,7 +103,6 @@ To guarantee accurate detection of "same state" stalls across intervals, the wat
    - `last_log_hash`: Checksum or line count of recent task execution log.
    - `stagnation_count`: Consecutive watch cycles with zero state change.
    - `last_updated`: Timestamp of last observed progress.
-   - `pending_staff_mail`: Map of `{ billet: [ { message_id, cycles_pending } ] }`.
 
 2. **State Delta Evaluation**:
    Compare the current audit against the previous ledger entry:
@@ -203,7 +179,7 @@ The order is maintained at [`orders/operations_watch.toml`](../../orders/operati
 # Cadence adjustable: "*/15 * * * *" (15m), "0 * * * *" (1h), "0 */8 * * *" (8h)
 
 [order]
-description = "Generic Operations Watch: Inbound mail triage, peer unread mail patrol, active sub-bead ledger tracking, stagnation delegation, and CoS escalation"
+description = "Generic Operations Watch: Inbound mail triage, active sub-bead ledger tracking, stagnation delegation, and CoS escalation"
 exec = "commands/operations_watch.sh"
 trigger = "cron"
 schedule = "*/15 * * * *"
@@ -213,7 +189,8 @@ schedule = "*/15 * * * *"
 
 ## 6. Staff Billets & Responsibilities
 
-- **S-3 Operations (`s3-operations`)**: Doctrinal proponent and operational custodian of the watch patrol. Manages state ledger, audits peer unread mail, analyzes deltas, delegates to staff, and escalates 4-session stalls.
+- **S-3 Operations (`s3-operations`)**: Doctrinal proponent and operational custodian of the watch patrol. Manages state ledger, analyzes deltas, delegates to staff, and escalates 4-session stalls.
+- **S-6 Signal (`s6-signal`)**: Communications watchstander. Custodian of inter-staff communications watch and automated message priority delivery per [`SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md`](SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md).
 - **S-1 Personnel & Administration (`s1-personnel`)**: Doctrinal records custodian of `rigs/a-staff`. Formats and maintains administrative compliance of this SOP.
 - **Mayor (`mayor`)**: Municipal controller. Owns the physical configuration of `orders/operations_watch.toml`, manages order registration, and adjusts schedule intervals via `gc reload`.
 - **Chief of Staff (`colt-cos`)**: Approving authority for watch interval adjustments, recipient of completions, 4-session escalations, and clarifications.
