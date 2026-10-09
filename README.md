@@ -25,6 +25,7 @@ Per Command Directive and Commander's Planning Guidance (CPG), **S-1 Personnel &
   - [`SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md`](directives/SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md): Completed Staff Work and AAR lifecycle protocol.
   - [`REQ_CROSS_REPO_GIT_CLEANLINESS_AUDIT.md`](directives/REQ_CROSS_REPO_GIT_CLEANLINESS_AUDIT.md): Cross-repository hygiene requirements.
 - **[`battlebook/`](battlebook/)**: Operational procedures and model dossiers maintained by functional staff.
+  - [`ROSTER_STAFF_BILLETS_AND_IDENTITIES.md`](battlebook/ROSTER_STAFF_BILLETS_AND_IDENTITIES.md): Administrative staff roster, NHI directory, and billet specifications.
   - [`SOP_GIT_WORKTREE_CLEANLINESS.md`](battlebook/SOP_GIT_WORKTREE_CLEANLINESS.md): Standard Operating Procedure for worktree management.
   - [`SOP_S3_TACTICAL_WATCH_CADENCE.md`](battlebook/SOP_S3_TACTICAL_WATCH_CADENCE.md): S-3 Tactical Operations Watch Cadence.
   - [`SOP_S4_REPOSITORY_PROVISIONING.md`](battlebook/SOP_S4_REPOSITORY_PROVISIONING.md): S-4 Gitea and depot provisioning doctrine.

@@ -167,17 +167,17 @@ Upon expiration:
 
 ## 4. Governance & Staff Responsibilities Matrix
 
-| Billet                               | Role in Planning Cadence | Primary Responsibilities                                                                                               |
-| :----------------------------------- | :----------------------- | :--------------------------------------------------------------------------------------------------------------------- |
-| **Commander**                        | Strategic Sponsor        | Approves CPG, Campaign Plans, and 14-day re-baselining gates.                                                          |
-| **Chief of Staff (`colt-cos`)**      | Operational Lead         | Authors Campaign Plans; reviews and approves OPORDs; issues strategic FRAGOs; enforces the 14-day gate.                |
-| **S-1 Personnel (`s1-personnel`)**   | Administrative Custodian | Maintains this SOP; audits documentation format, style compliance, and records retention across all planning horizons. |
-| **S-2 Intelligence (`s2-intel`)**    | Terrain Reconnaissance   | Performs codebase indexing, AST terrain analysis, and pre-plan risk assessments.                                       |
-| **S-3 Operations (`s3-operations`)** | Tactical Proponent       | Authors OPORDs; sequences task beads; issues tactical FRAGOs; conducts 14-day terrain re-baselining.                   |
-| **S-4 Logistics (`s4-logistics`)**   | Resource Validation      | Audits token consumption, storage capacity, and repo provisioning feasibility for proposed plans.                      |
-| **S-6 Signal (`s6-signal`)**         | Communications & Routing | Validates gateway routing, inference telemetry export, and proxy sanitization requirements.                            |
-| **Platform SRE (`colt-sysadmin`)**   | Infrastructure Readiness | Validates K8s compute, GPU availability, and network node capacity before OPORD execution.                             |
-| **Mayor (`mayor`)**                  | Municipal Plumber        | Maintains workspace plumbing, Dolt SQL integrity, and session hygiene throughout the operational rhythm.               |
+| Billet                               | Role in Planning Cadence | Primary Responsibilities                                                                                                          |
+| :----------------------------------- | :----------------------- | :-------------------------------------------------------------------------------------------------------------------------------- |
+| **Commander**                        | Strategic Sponsor        | Approves CPG, Campaign Plans, and 14-day re-baselining gates.                                                                     |
+| **Chief of Staff (`colt-cos`)**      | Operational Lead         | Authors Campaign Plans; reviews and approves OPORDs; issues strategic FRAGOs; enforces the 14-day gate.                           |
+| **S-1 Personnel (`s1-personnel`)**   | Administrative Custodian | Maintains this SOP; audits documentation format, style compliance, and records retention across all planning horizons.            |
+| **S-2 Intelligence (`s2-intel`)**    | Terrain & Pipeline Recon | Scoutes upstream issues (`gastownhall/gascity`), performs codebase indexing, AST terrain analysis, and pre-plan risk assessments. |
+| **S-3 Operations (`s3-operations`)** | Tactical Proponent       | Authors OPORDs; sequences task beads; issues tactical FRAGOs; conducts 14-day terrain re-baselining.                              |
+| **S-4 Logistics (`s4-logistics`)**   | Resource Validation      | Audits token consumption, storage capacity, and repo provisioning feasibility for proposed plans.                                 |
+| **S-6 Signal (`s6-signal`)**         | Communications & Routing | Validates gateway routing, inference telemetry export, and proxy sanitization requirements.                                       |
+| **Platform SRE (`colt-sysadmin`)**   | Infrastructure Readiness | Validates K8s compute, GPU availability, and network node capacity before OPORD execution.                                        |
+| **Mayor (`mayor`)**                  | Municipal Plumber        | Maintains workspace plumbing, Dolt SQL integrity, and session hygiene throughout the operational rhythm.                          |
 
 ---
 

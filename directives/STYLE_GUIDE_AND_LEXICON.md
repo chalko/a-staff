@@ -35,7 +35,7 @@ The rule of thumb across all Camp Colt documentation and communications is:
 These concepts provide genuine structural discipline and are official Camp Colt doctrine:
 
 1. **Staff Billets (S-1 through S-6, Platform SRE, Mayor, CoS)**:
-   - Clear division of responsibility: S-1 (Personnel/Records/Admin), S-2 (Intel/Recon), S-3 (Operations/Execution), S-4 (Logistics/Repos/Compute), S-6 (Signal/Comms/Gateway), Platform SRE (Hardware/K8s), Mayor (Municipal plumbing), CoS (Coordination/Approvals).
+   - Clear division of responsibility: S-1 (Personnel/Records/Admin), S-2 (Intel/Recon/Upstream Pipeline Scouting), S-3 (Operations/Execution), S-4 (Logistics/Repos/Compute), S-6 (Signal/Comms/Gateway), Platform SRE (Hardware/K8s), Mayor (Municipal plumbing), CoS (Coordination/Approvals).
 2. **Completed Staff Work (MCTP 3-30A)**:
    - Work submitted to Command or CoS must be complete, tested, self-contained, and accompanied by empirical verification receipts and simple reproduction steps.
 3. **Operations Watch & Communications Watch**:
