@@ -20,6 +20,7 @@ Per Command Directive and Commander's Planning Guidance (CPG), **S-1 Personnel &
   - [`COMMANDERS_PLANNING_GUIDANCE.md`](directives/COMMANDERS_PLANNING_GUIDANCE.md): Foundational Commander's Planning Guidance (CPG) by Nick Chalko.
   - [`STYLE_GUIDE_AND_LEXICON.md`](directives/STYLE_GUIDE_AND_LEXICON.md): Authoritative Camp Colt Staff Style Guide & Operational Lexicon.
   - [`SOP_OPERATIONAL_CADENCE_AND_PLANNING_HORIZONS.md`](directives/SOP_OPERATIONAL_CADENCE_AND_PLANNING_HORIZONS.md): Operational planning cadence, time horizons, and 14-day expiration gate.
+  - [`SOP_OPERATIONS_WATCH_AND_STAGNATION_DETECTION.md`](directives/SOP_OPERATIONS_WATCH_AND_STAGNATION_DETECTION.md): Operations Watch patrol protocol, 5-phase inspection, multi-cadence scheduling, and graduated stagnation delegation.
   - [`SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md`](directives/SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md): Completed Staff Work and AAR lifecycle protocol.
   - [`REQ_CROSS_REPO_GIT_CLEANLINESS_AUDIT.md`](directives/REQ_CROSS_REPO_GIT_CLEANLINESS_AUDIT.md): Cross-repository hygiene requirements.
 - **[`battlebook/`](battlebook/)**: Operational procedures and model dossiers maintained by functional staff.
