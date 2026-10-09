@@ -68,46 +68,52 @@ flowchart TD
 >
 > All directives, technical receipts, staff updates, and blocker escalations received since the prior watch cycle are triaged and logged before evaluating task progress.
 
-### Phase 1: Active Bead & Sub-Bead Tree Audit
+### Phase 1: Active Convoys, Tactical Workers, & Bead Audit
 
-1. Query all active beads assigned to the watchstander's billet or active convoys across rigs:
+1. **Active Convoys & OPORDs Audit**:
+   Query all active convoys to identify the operational main effort:
 
    ```bash
-   gc bd list --json
-   gc bd --rig suitcase-ai list --json
-   gc bd --rig gascity list --json
+   gc convoy list --json
    ```
 
-2. For each parent bead, resolve its constituent sub-bead tree, child tasks, and assigned worker sessions:
+   For each active convoy, inspect its progress (`closed/total`), owner billet, and constituent child bead graph. Detect stranded convoys where work is ready but unassigned.
+
+2. **Active Tactical Worker Session Audit**:
+   Query live sessions to isolate ephemeral tactical workers (`gc.run-operator`, `polecat-*`, `worker-*`, `coder`):
 
    ```bash
    gc session list --json
    ```
 
-3. Identify all sub-beads currently in `in_progress` or unassigned `open` state within active convoys.
+   Correlate active workers with their target worktree, assigned bead, process liveness, and log turn activity.
+
+3. **Active Workstream vs. Backlog Separation**:
+   Query beads across rigs:
+
+   ```bash
+   gc bd list --json
+   gc bd --rig gascity list --json
+   gc bd --rig suitcase-ai list --json
+   ```
+
+   Separate genuine **Active Workstreams** (`in_progress`, assigned/routed `open`, or child beads of active convoys) from the unassigned backlog queue. Backlog beads awaiting sling are counted separately and excluded from active workstream tables to prevent vanity metric inflation.
 
 ### Phase 2: State Tracking Ledger & Delta Check
 
-To guarantee accurate detection of "same state" stalls across intervals, the watch maintains a structured tracking ledger at `.gc/runtime/watch/operations_watch_state.json` (or summary Markdown `.gc/runtime/watch/operations_watch_state.md`).
+To guarantee accurate detection of "same state" stalls across intervals, the watch maintains a structured tracking ledger at `.gc/runtime/watch/operations_watch_state.json`.
 
 1. **State Ledger Schema**:
-   For each tracked parent bead and sub-bead, record:
+   The ledger records both convoy-level and bead-level state:
 
-   - `bead_id`: Identifier (e.g. `gcs-6fu`, `sa-8h6`).
-   - `title`: Short descriptive title.
-   - `assignee`: Staff billet or worker session.
-   - `status`: `open`, `in_progress`, `blocked`, `closed`.
-   - `worktree_head`: Git commit hash / dirty state (`git rev-parse HEAD`, `git status -s`).
-   - `worker_session_id`: Active session ID from `gc session list`.
-   - `last_nudge_age`: Age of last nudge/activity.
-   - `last_log_hash`: Checksum or line count of recent task execution log.
-   - `stagnation_count`: Consecutive watch cycles with zero state change.
-   - `last_updated`: Timestamp of last observed progress.
+   - `convoys[convoy_id]`: `id`, `title`, `owner`, `closed`, `total`, `lead_bead`, `stagnant_ticks`, `escalated`.
+   - `beads[bead_id]`: `id`, `title`, `rig`, `assignee`, `status`, `updated_at`, `stagnant_ticks`, `escalated`.
 
 2. **State Delta Evaluation**:
    Compare the current audit against the previous ledger entry:
-   - **Progress Observed**: If `worktree_head`, test results, or task logs changed, reset `stagnation_count = 0` and update `last_updated`.
-   - **Same State (Stall)**: If the bead remains `in_progress` with identical worktree commit, zero file changes, and unchanged worker activity, increment `stagnation_count += 1`.
+   - **Convoy Delta**: If an open convoy's `closed` bead count and active lead bead remain identical across ticks, increment `stagnant_ticks += 1`.
+   - **Workstream Delta**: If an active bead (`in_progress` OR assigned/routed `open`) remains unchanged in Dolt storage and associated worker activity, increment `stagnant_ticks += 1`.
+   - **Progress Observed**: Reset `stagnant_ticks = 0` and clear escalation flag upon any state progression or commit advance.
 
 ---
 
