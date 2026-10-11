@@ -481,31 +481,48 @@ resources:
 
 ## 6. External Prerequisites & Configuration
 
-### 6.1 Google Cloud Console Configuration
+### 6.1 Google Cloud OAuth Configuration & CLI Analysis
 
-The Google Cloud OAuth 2.0 Web Client requires registration of the authorized redirect callback URI:
+#### Standard OAuth 2.0 Client CLI Limitation
 
-1. Navigate to **Google Cloud Console** > **APIs & Services** > **Credentials**.
-2. Select the existing Camp Colt OAuth 2.0 Client (or create `colt-gascity-dashboard`).
-3. Add to **Authorized JavaScript origins**:
+For standard Google Cloud OAuth 2.0 Web Client credentials (under **APIs & Services** > **Credentials**), Google does **not** provide a direct `gcloud` CLI command to mutate `redirect_uris` or `javascript_origins`. This is an intentional security design by Google to prevent programmatic tampering of OAuth consent callbacks on standard web applications.
+_(Note: `gcloud iam oauth-clients update` is strictly reserved for Workforce Identity Federation pools and will reject standard project client IDs)._
+
+#### Required Configuration Steps
+
+1. Determine active project or open the credentials page directly:
+
+   ```bash
+   # Print direct console URL for active project
+   echo "https://console.cloud.google.com/apis/credentials?project=$(gcloud config get-value project 2>/dev/null || echo '<PROJECT_ID>')"
+   ```
+
+2. In **APIs & Services** > **Credentials**, click the existing OAuth 2.0 Web Client (used by Grafana / Camp Colt).
+3. Under **Authorized JavaScript origins**, add:
    - `https://gc.colt.chalko.com`
    - `https://gascity.colt.chalko.com`
-4. Add to **Authorized redirect URIs**:
+4. Under **Authorized redirect URIs**, add:
    - `https://gc.colt.chalko.com/oauth2/callback`
    - `https://gascity.colt.chalko.com/oauth2/callback`
+5. Click **Save**. _(Note: Google propagate changes within 5 minutes)._
 
-### 6.2 HashCorp Vault Secrets Provisioning
+### 6.2 HashCorp Vault Secrets Provisioning (Native Entropy Generation)
 
-Generate a random 32-byte (24-character base64 or 32-byte string) cookie encryption secret and store it in Vault:
+HashCorp Vault provides a native random generation system tool (`/sys/tools/random`) that produces cryptographically secure entropy directly on the platform without requiring external scripts:
 
 ```bash
-# Generate secret
-COOKIE_SECRET=$(python3 -c 'import os,base64; print(base64.b64encode(os.urandom(32)).decode())')
+# 1. Generate 32-byte base64-encoded random secret natively using HashCorp Vault
+COOKIE_SECRET=$(vault write -format=json sys/tools/random/32 format=base64 | jq -r .data.random_bytes)
 
-# Write to Vault
+# 2. Store directly in Vault KV store
 vault kv put secret/colt/gascity/oauth \
   cookie_secret="$COOKIE_SECRET"
+
+# 3. Verify secret in Vault
+vault kv get secret/colt/gascity/oauth
 ```
+
+_(Alternatively, in Terraform/OpenTofu via HashCorp `hashicorp/random` provider: `resource "random_bytes" "gc_cookie_secret" { length = 32 }`)._
 
 ### 6.3 CoreDNS / Local DNS Verification
 
