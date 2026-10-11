@@ -518,8 +518,8 @@ COOKIE_SECRET=$(vault write -format=json sys/tools/random/32 format=base64 | jq 
 vault kv put secret/colt/gascity/oauth \
   cookie_secret="$COOKIE_SECRET"
 
-# 3. Verify secret in Vault
-vault kv get secret/colt/gascity/oauth
+# 3. Verify secret existence safely (metadata only — never dump plaintext values to stdout/logs)
+vault kv metadata get secret/colt/gascity/oauth
 ```
 
 _(Alternatively, in Terraform/OpenTofu via HashCorp `hashicorp/random` provider: `resource "random_bytes" "gc_cookie_secret" { length = 32 }`)._
