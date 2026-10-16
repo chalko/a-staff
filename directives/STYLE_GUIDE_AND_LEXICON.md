@@ -84,9 +84,9 @@ To prevent cognitive friction, semantic collisions, and broken pattern recogniti
 
 4. **Identifier & Handle Conventions**:
    - In code, configurations, prompt headers, and session aliases, prefer the direct, clean section handle:
-     - Preferred: `s1`, `s2`, `s3`, `s4`, `s6`, `cos`
-     - Contextual / Billet Aliases: `s1-personnel`, `s2-intel`, `s3-operations`, `s4-logistics`, `s6-signal`, `colt-cos`
-     - **Prohibited**: Do not invent `a1`, `a-1`, `astaff-s1`, or `s1-admin`.
+     - Preferred general section handles: `s1`, `s2`, `s3`, `s4`, `s6`, `cos`
+     - Authorized subsection & specialized billet handles: Specific functional billets and subsections within a staff section are completely valid (e.g. `s3-ops` for current-ops watch, `s3-plans` for future operations/planning, `s4-logistics`, `s4a-platform`, `s2-intel`).
+     - **Prohibited**: Do not invent `a1`, `a-1`, or `astaff-s1`.
 
 ---
 
