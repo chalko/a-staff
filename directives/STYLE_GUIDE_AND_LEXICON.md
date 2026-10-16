@@ -104,7 +104,6 @@ Used in `rigs/colt-results/reports/`:
 **Document Type**: Technical Telemetry & Benchmark Report
 **Author / Billet**: <Lead Billet> (e.g. `S-3 Operations (s3-operations)`)
 **Governing Task Bead**: <Bead Link>
-**Hardware Platform**: ASUS Ascent GX10 (NVIDIA Grace Blackwell GB10 @ `10.82.0.3:8000`)
 **Serving Engine**: vLLM (<Engine Parameters>)
 **Model Profile**: <Model Identifier>
 **Verification Date**: YYYY-MM-DD
@@ -125,7 +124,6 @@ Document ID:     ARCH-COLT-<PROJECT>-<NAME>
 Document Type:   System Architecture & Specification
 Author / Billet: <Author Billet>
 Reviewing Gates: <Reviewing Billets>
-Target Enclave:  Camp Colt Sovereign AI Enclave (10.82.0.0/16)
 Date:            YYYY-MM-DD
 Status:          DRAFT | APPROVED | ACTIVE | COMPLETED
 ```
@@ -163,7 +161,6 @@ Used in `colony/docs/`:
 **Date / Timestamp:** <Day, DD Month YYYY, HHMM PDT>
 **Facilitator:** Chief of Staff (`colt-cos`), Camp Colt
 **Operational Context:** Staff Coordination & Operational Status Update
-**Target Environment:** Sovereign Command Post (`colt-hq` @ `10.82.0.20`)
 
 ---
 ```
