@@ -1,45 +1,39 @@
-# Standard Operating Procedure: Repository & Supply Depot Provisioning
+# Standard Operating Procedure: Repository Provisioning
 
-**Status:** Approved
-**Date:** 2026-09-22
-**Standard:** Completed Staff Work
+## 1. Purpose
 
----
-
-## 1. Purpose & Doctrinal Authority
-
-Under Camp Colt doctrine (established in `AGENTS.md` and `SOP-0.2-WATCH-POSTURE`), Git repositories are classified as **Logistics Supply Depots (Class IX/VII digital material)**.
+This procedure defines how repositories under the `colt/` organization in Gitea (`gitea.colt.chalko.com`) are provisioned, sized, configured, and maintained.
 
 The S-4 Logistics Officer (`s4-logistics`) holds sole administrative cognizance over:
 
-1. Requisition intake and inventory tracking for all code depots under the `colt/` organization.
+1. Requisition intake and inventory tracking for all repositories under the `colt/` organization.
 2. Creation, sizing, and configuration of remote repositories on in-cluster Gitea (`gitea.colt.chalko.com`).
 3. Setting repository access policies, branch protection rules, and upstream synchronization mirrors.
-4. Issuing verified depot coordinates to S-3 Operations and the Mayor for municipal integration.
+4. Issuing verified repository coordinates to S-3 Operations and the Mayor for municipal integration.
 
-Platform SRE (`colt-sysadmin`) maintains the underlying Gitea K8s pod/storage class facility; S-4 manages the inventory and depots inside the facility.
+Platform SRE (`colt-sysadmin`) maintains the underlying Gitea K8s pod/storage class facility; S-4 manages the inventory and repositories inside the cluster.
 
 ---
 
-## 2. Depot Provisioning Workflow
+## 2. Repository Provisioning Workflow
 
 ```
 [S-3 Operations]          [S-4 Logistics]                 [Mayor]
        │                         │                           │
-       ├─ Requisition Depot ────►│                           │
+       ├─ Create Repository ────►│                           │
        │  (Name, Scope, Quota)   │                           │
        │                         ├─ 1. Authenticate via Token│
        │                         ├─ 2. Provision Gitea Repo  │
        │                         ├─ 3. Set Teams & Quotas    │
        │                         ├─ 4. Verify SSH Read/Write │
        │                         │                           │
-       │◄─ Requisition Green ────┼─ Depot Delivery ─────────►│
+       │◄─ Requisition Green ────┼─ Repository Coordinates ─────────►│
        │                         │  (SSH URL, Rig Prefix)    │
        │                         │                           ├─ Clone & Mount
        │                         │                           └─ city.toml Update
 ```
 
-### Step 1: Requisition Intake
+### Step 1: Intake & Specifications
 
 Requisitions arrive via `gc mail` from S-3 Operations (tactical requirement) or Chief of Staff (strategic directive). Requisitions must specify:
 
@@ -51,7 +45,7 @@ Requisitions arrive via `gc mail` from S-3 Operations (tactical requirement) or 
 
 ### Step 2: Gitea API Execution
 
-S-4 executes depot creation using the scoped Gitea token (`repo:*`, `org:read`):
+S-4 executes repository creation using the scoped Gitea token (`repo:*`, `org:read`):
 
 ```bash
 # Provision repository under the 'colt' organization
@@ -85,7 +79,7 @@ git ls-remote ssh://git@gitea.colt.chalko.com:30222/colt/<repo-name>.git
 
 _Verification criteria:_ Must exit code 0 and list `refs/heads/main`.
 
-### Step 5: Depot Delivery & Handoff
+### Step 5: Repository Coordinates & Handoff
 
 S-4 sends a completion dispatch with `--notify` to both S-3 Operations and the Mayor:
 

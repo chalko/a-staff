@@ -1,11 +1,6 @@
 # Administrative Staff Roster & Non-Human Identity Directory
 
-**Status:** Approved
-**Date:** 2026-10-09
-
----
-
-## 1. Doctrinal Purpose & Custody
+## 1. Purpose & Scope
 
 In accordance with the Commander's Planning Guidance (CPG) and MCTP 3-30A (_Command and Staff Action_), **S-1 Personnel & Administration** maintains the authoritative administrative roster, Non-Human Identity (NHI) mappings, and access scopes across Camp Colt.
 
@@ -15,16 +10,16 @@ This directory formalizes the active command billets, agent template definitions
 
 ## 2. Command & Staff Billets Directory
 
-| Billet                    | Session Alias                    | Agent Template          | Execution Provider | Watch Posture | Primary Cognizance & Mission                                                                                                                    |
-| :------------------------ | :------------------------------- | :---------------------- | :----------------- | :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Chief of Staff**        | `cos` (`colt-cos`)               | `agents/cos/`           | Antigravity        | `always`      | Operational lead; cross-staff coordination; reviewing and approving completed staff work; enforcing planning cadence and 14-day gates.          |
-| **Mayor**                 | `mayor`                          | `agents/mayor/`         | Antigravity        | `always`      | Headquarters commandant; municipal plumbing, Dolt database integrity, session reconciler hygiene, and order lifecycle management (`gc reload`). |
-| **S-1 Personnel & Admin** | `s1` (`s1-personnel`)            | `agents/s1-personnel/`  | Antigravity        | `always`      | Doctrinal records custodian of `rigs/a-staff`; NHI permissions, RBAC, access policies, credential audits, and administrative style compliance.  |
-| **S-2 Intelligence**      | `s2` (`s2-intel`)                | `agents/s2-intel/`      | Antigravity        | `on_demand`   | Upstream pipeline scouting (`gastownhall/gascity/issues`), terrain analysis, codebase indexing, and security/threat evaluation.                 |
-| **S-3 Operations**        | `s3` (`s3-operations`)           | `agents/s3-operations/` | Antigravity        | `always`      | Tactical operations lead; convoy and task bead sequencing; worker stagnation detection; Operations Watch patrol protocol.                       |
-| **S-4 Logistics**         | `s4` (`s4-logistics`)            | `agents/s4-logistics/`  | Antigravity        | `always`      | Digital supply depots (Gitea repo provisioning), token draw tracking, thermal/power telemetry rollups, and storage quotas.                      |
-| **S-6 Signal & Cyber**    | `s6` (`s6-signal`)               | `agents/s6-signal/`     | Antigravity        | `always`      | Communications watchstander; gateway routing, proxy sanitization, automated priority mail watchdog (`signal_mail_watch.sh`), and net watch.     |
-| **Platform SRE**          | `colt-sysadmin` (`s4a-platform`) | `agents/colt-sysadmin/` | Antigravity        | `always`      | Platform infrastructure lead; Proxmox hypervisors, K8s cluster, GPU nodes (Grace Blackwell GB10), and hardware alerts.                          |
+| Billet                    | Session Alias | Agent Template | Execution Provider | Watch Posture | Primary Cognizance & Mission                                                                                                                                    |
+| :------------------------ | :------------ | :------------- | :----------------- | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Chief of Staff**        | ()            |                | Antigravity        |               | Operational lead; cross-staff coordination; reviewing and approving completed staff work; enforcing planning cadence and 14-day gates.                          |
+| **Mayor**                 |               |                | Antigravity        |               | Headquarters commandant; municipal plumbing, Dolt database integrity, session reconciler hygiene, and order lifecycle management (No config changes detected.). |
+| **S-1 Personnel & Admin** | ()            |                | Antigravity        |               | Records custodian of ; NHI permissions, RBAC, access policies, credential audits, and administrative style compliance.                                          |
+| **S-2 Intelligence**      | ()            |                | Antigravity        |               | Upstream pipeline scouting (), terrain analysis, codebase indexing, and security/threat evaluation.                                                             |
+| **S-3 Operations**        | ()            |                | Antigravity        |               | Tactical operations lead; convoy and task bead sequencing; worker stagnation detection; Operations Watch patrol protocol.                                       |
+| **S-4 Logistics**         | ()            |                | Antigravity        |               | Repository provisioning (Gitea), token draw tracking, thermal/power telemetry rollups, and storage quotas.                                                      |
+| **S-6 Signal & Cyber**    | ()            |                | Antigravity        |               | Communications watchstander; gateway routing, proxy sanitization, automated priority mail watchdog (), and net watch.                                           |
+| **Platform SRE**          | ()            |                | Antigravity        |               | Platform infrastructure lead; Proxmox hypervisors, K8s cluster, GPU nodes (Grace Blackwell GB10), and hardware alerts.                                          |
 
 ---
 

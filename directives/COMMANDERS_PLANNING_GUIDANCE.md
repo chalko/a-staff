@@ -1,12 +1,8 @@
 # Commander's Planning Guidance: Show Me the Inference
 
-```text
-Document:        COMMANDER'S PLANNING GUIDANCE (CPG)
-Author:          Nick Chalko
-Target Outlet:   https://showmetheinference.com & Internal Strategic Alignment
-Status:          APPROVED BASELINE
-Date:            2026-09-24
-```
+_Author: Nick Chalko_
+_Target: <https://showmetheinference.com> & Strategic Alignment_
+_Date: 2026-09-24_
 
 ---
 

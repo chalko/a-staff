@@ -1,47 +1,35 @@
-# Camp Colt Staff Rig (`rigs/a-staff`)
+# Camp Colt Staff Directives & Playbooks ()
 
-**Doctrinal Rig Custodian**: S-1 Personnel & Administration (`s1-personnel`), Camp Colt
-**Repository Class**: Logistics Class IX/VII Digital Material (Managed by S-4 Logistics in Gitea)
-**Infrastructure & Hosting**: Platform SRE (`colt-sysadmin`)
+This repository contains operational policies, standard operating procedures (SOPs), playbooks, and organizational reference materials for autonomous agents operating in Camp Colt.
 
----
+## Repository Structure
 
-## 1. Overview & Doctrinal Custody
+- **[](directives/)**: Core policies, guidelines, and operating standards:
+  - [](directives/COMMANDERS_PLANNING_GUIDANCE.md): Foundational planning guidance by Nick Chalko.
+  - [](directives/STYLE_GUIDE_AND_LEXICON.md): Technical communication guidelines and terminology standards.
+  - [](directives/SOP_OPERATIONAL_CADENCE_AND_PLANNING_HORIZONS.md): Planning cycles, task horizons, and 14-day completion gates.
+  - [](directives/SOP_OPERATIONS_WATCH_AND_STAGNATION_DETECTION.md): Operations watch patrols and stall-mitigation protocols.
+  - [](directives/SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md): Priority message delivery, routing, and notifications.
+  - [](directives/SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md): Completed staff work and After Action Review (AAR) workflows.
+  - [](directives/SOP_WEEKLY_TASK_FRICTION_AAR.md): Weekly task friction and process improvement review.
+  - [](directives/REQ_CROSS_REPO_GIT_CLEANLINESS_AUDIT.md): Cross-repository hygiene and audit standards.
+- **[](playbooks/)**: Execution playbooks and operational procedures:
+  - [](playbooks/ROSTER_STAFF_BILLETS_AND_IDENTITIES.md): Staff role specifications, session aliases, and execution providers.
+  - [](playbooks/SOP_GIT_WORKTREE_CLEANLINESS.md): Git worktree management and workspace cleanliness.
+  - [](playbooks/SOP_S3_TACTICAL_WATCH_CADENCE.md): Operations watch sampling cadence and stall escalation.
+  - [](playbooks/SOP_S4_REPOSITORY_PROVISIONING.md): Repository provisioning, quotas, and branch protection.
+  - [](playbooks/models/): Model specifications and performance dossiers.
+- **[](references/)**: Baseline reference manuals (e.g. MCTP 3-30A, MCRP 3-10A.1).
 
-The `a-staff` rig contains the authoritative administrative doctrine, operational directives, playbooks, and foundational references for the **A-Staff Platform** (Agentic Staff / Autonomous Staff in a Box).
+## Style & Standards
 
-- **System Branding & Taxonomy**: While the macro software system is named **A-Staff**, internal functional sections strictly retain standard Marine Corps battalion staff designations (**S-1 through S-6** and **Chief of Staff**) with preferred short handles (`s1`, `s2`, `s3`, `s4`, `s6`, `cos`). Standalone "A-1" designations are prohibited due to military air staff divergence and severe civilian semantic collisions (see [`directives/STYLE_GUIDE_AND_LEXICON.md`](directives/STYLE_GUIDE_AND_LEXICON.md#23-system-taxonomy--billet-nomenclature-a-staff-vs-s-billets)).
-- **Custody**: Per Command Directive and Commander's Planning Guidance (CPG), **S-1 Personnel & Administration** holds primary custody and editorial governance over all documentation, records management, style compliance, and doctrinal hygiene within this repository.
+All documentation must adhere to [](directives/STYLE_GUIDE_AND_LEXICON.md):
 
----
+- Keep documentation professional, direct, and free of theatrical jargon.
+- Emphasize empirical evidence, reproducible configs, and telemetry over assertions.
+- Maintain consistent copyright and attribution.
 
-## 2. Directory Structure
-
-- **[`directives/`](directives/)**: Foundational guidance, style standards, and staff policies.
-  - [`COMMANDERS_PLANNING_GUIDANCE.md`](directives/COMMANDERS_PLANNING_GUIDANCE.md): Foundational Commander's Planning Guidance (CPG) by Nick Chalko.
-  - [`STYLE_GUIDE_AND_LEXICON.md`](directives/STYLE_GUIDE_AND_LEXICON.md): Authoritative Camp Colt Staff Style Guide & Operational Lexicon.
-  - [`SOP_OPERATIONAL_CADENCE_AND_PLANNING_HORIZONS.md`](directives/SOP_OPERATIONAL_CADENCE_AND_PLANNING_HORIZONS.md): Operational planning cadence, time horizons, and 14-day expiration gate.
-  - [`SOP_OPERATIONS_WATCH_AND_STAGNATION_DETECTION.md`](directives/SOP_OPERATIONS_WATCH_AND_STAGNATION_DETECTION.md): Operations Watch patrol protocol, 5-phase inspection, multi-cadence scheduling, and graduated stagnation delegation.
-  - [`SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md`](directives/SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md): Signal Communications Watch protocol, 5-minute watchdog, graduated priority thresholds, and P1 failure escalation.
-  - [`SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md`](directives/SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md): Completed Staff Work and AAR lifecycle protocol.
-  - [`REQ_CROSS_REPO_GIT_CLEANLINESS_AUDIT.md`](directives/REQ_CROSS_REPO_GIT_CLEANLINESS_AUDIT.md): Cross-repository hygiene requirements.
-- **[`playbooks/`](playbooks/)**: Operational procedures and model dossiers maintained by functional staff.
-  - [`ROSTER_STAFF_BILLETS_AND_IDENTITIES.md`](playbooks/ROSTER_STAFF_BILLETS_AND_IDENTITIES.md): Administrative staff roster, NHI directory, and billet specifications.
-  - [`SOP_GIT_WORKTREE_CLEANLINESS.md`](playbooks/SOP_GIT_WORKTREE_CLEANLINESS.md): Standard Operating Procedure for worktree management.
-  - [`SOP_S3_TACTICAL_WATCH_CADENCE.md`](playbooks/SOP_S3_TACTICAL_WATCH_CADENCE.md): S-3 Tactical Operations Watch Cadence.
-  - [`SOP_S4_REPOSITORY_PROVISIONING.md`](playbooks/SOP_S4_REPOSITORY_PROVISIONING.md): S-4 Gitea and depot provisioning doctrine.
-  - [`models/`](playbooks/models/): Standardized model specifications and performance dossiers.
-- **[`references/`](references/)**: Baseline doctrine reference manuals (MCTP 3-30A, MCRP 3-10A.1).
-
----
-
-## 3. Style & Doctrinal Compliance
-
-All contributions to `a-staff` must adhere strictly to [`STYLE_GUIDE_AND_LEXICON.md`](directives/STYLE_GUIDE_AND_LEXICON.md). Faux classification stamps, theatrical military roleplay jargon ("COC", "Fires", "War Orders"), and unverified claims are strictly prohibited.
-
----
-
-## 4. License
+## License
 
 Copyright © 2026 Nick Chalko.
 Licensed under the [Apache License, Version 2.0](LICENSE).

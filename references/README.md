@@ -1,6 +1,6 @@
 # References
 
-Doctrinal and technical references used to inform the Suitcase AI architecture.
+Organizational and technical references used to inform the agent architecture.
 
 ## Contents
 

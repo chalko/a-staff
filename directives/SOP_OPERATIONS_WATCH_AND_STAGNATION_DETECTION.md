@@ -1,12 +1,6 @@
 # Standard Operating Procedure: Operations Watch Patrol & Stagnation Detection Protocol
 
-**Status:** Approved
-**Date:** 2026-10-08
-**Standard:** Completed Staff Work
-
----
-
-## 1. Purpose & Doctrinal Intent
+## 1. Purpose
 
 In accordance with the Commander's Planning Guidance (CPG) and MCTP 3-30A (_Command and Staff Action_), Camp Colt enforces continuous, empirical oversight of all active operational tasks. Autonomous multi-agent swarms and tactical workers frequently encounter silent stalls, compilation loops, parsing timeouts, or unmonitored crash loops.
 
@@ -188,8 +182,8 @@ schedule = "*/15 * * * *"
 
 ## 6. Staff Billets & Responsibilities
 
-- **S-3 Operations (`s3-operations`)**: Doctrinal proponent and operational custodian of the watch patrol. Manages state ledger, analyzes deltas, delegates to staff, and escalates 4-session stalls.
+- **S-3 Operations (`s3-operations`)**: Operational custodian of the watch patrol. Manages state ledger, analyzes deltas, delegates to staff, and escalates 4-session stalls.
 - **S-6 Signal (`s6-signal`)**: Communications watchstander. Custodian of inter-staff communications watch and automated message priority delivery per [`SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md`](SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md).
-- **S-1 Personnel & Administration (`s1-personnel`)**: Doctrinal records custodian of `rigs/a-staff`. Formats and maintains administrative compliance of this SOP.
+- **S-1 Personnel & Administration (`s1-personnel`)**: Records custodian of `rigs/a-staff`. Formats and maintains administrative compliance of this SOP.
 - **Mayor (`mayor`)**: Municipal controller. Owns the physical configuration of `orders/operations_watch.toml`, manages order registration, and adjusts schedule intervals via `gc reload`.
 - **Chief of Staff (`colt-cos`)**: Approving authority for watch interval adjustments, recipient of completions, 4-session escalations, and clarifications.

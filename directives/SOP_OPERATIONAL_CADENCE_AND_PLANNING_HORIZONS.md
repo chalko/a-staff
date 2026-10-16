@@ -1,12 +1,6 @@
 # Standard Operating Procedure: Operational Planning Cadence, Time Horizons, & Lifecycle Gates
 
-**Status:** Approved
-**Date:** 2026-10-07
-**Standard:** Completed Staff Work
-
----
-
-## 1. Doctrinal Purpose & Context
+## 1. Purpose & Context
 
 In an autonomous multi-agent software engineering enclave like Camp Colt, tactical polecats and staff billets operate at compute speeds far exceeding traditional human development cycles. However, speed without synchronized planning horizons leads to strategic drift, obsolete task beads, merge friction, and wasted token budgets.
 
@@ -27,7 +21,7 @@ Camp Colt organizes all operational activity into three distinct, interconnected
 │                     HORIZON 1: CAMPAIGN PLAN                              │
 │  • Duration: 30 to 90 Days (1–3 Months)                                   │
 │  • Custodian: Chief of Staff (colt-cos)                                   │
-│  • Location: rigs/a-staff/plans/                                          │
+│  • Location: camp-colt/plans/                                          │
 │  • Focus: Strategic Platform Jumps, Architecture Baselines, CPG Alignment │
 └─────────────────────────────────────┬─────────────────────────────────────┘
                                       │ Decomposes Into
@@ -37,7 +31,7 @@ Camp Colt organizes all operational activity into three distinct, interconnected
 │  • Duration: 3 to 14 Days                                                 │
 │  • Custodian: S-3 Operations (s3-operations) with Staff Concurrence       │
 │  • Tooling Map: Gas City Epics & Convoys                                  │
-│  • Location: rigs/a-staff/plans/ & target rig runbooks (e.g. plans/)      │
+│  • Location: camp-colt/plans/ & target rig runbooks (e.g. plans/)      │
 │  • Focus: Multi-Bead Tactical Workloads & System Capabilities             │
 └─────────────────────────────────────┬─────────────────────────────────────┘
                                       │ Adjusts Intraday

@@ -1,14 +1,8 @@
 # Standard Operating Procedure: Git Worktree & Working Tree Cleanliness
 
-**Status:** Approved
-**Date:** 2026-09-26
-**Standard:** Completed Staff Work
+## 1. Purpose
 
----
-
-## 1. Purpose & Doctrinal Authority
-
-Under Camp Colt doctrine (codified in `AGENTS.md` and `SOP_WATCH_POSTURE.md`), software repositories are classified as **Logistics Supply Depots (Class IX/VII digital material)**. A dirty git working tree or an orphaned secondary git worktree represents operational litter, unverified drift, and garrison decay.
+In an autonomous multi-agent development environment, agents create and switch across git branches and secondary worktrees. A dirty git working tree or an orphaned secondary worktree causes merge conflicts, unverified state drift, and wasted disk space.
 
 In an autonomous multi-agent environment where workers, polecats, and toolchains generate continuous runtime artifacts (AST indices, scratch scripts, test outputs, SQLite states), unmanaged working trees inevitably lead to:
 

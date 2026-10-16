@@ -1,11 +1,6 @@
 # Standard Operating Procedure (SOP): Multi-Agent Staff Action & After Action Review (AAR) Workflow
 
-**Status:** Approved
-**Date:** 2026-10-07
-
----
-
-## 1. Doctrinal Purpose & The Anti-Ghostwriting Invariant
+## 1. Purpose & The Anti-Ghostwriting Invariant
 
 Camp Colt is the sovereign command post and AI agent factory for Suitcase AI. Its fundamental organizational purpose is to achieve personal and technical mastery across **Multi-Agent Orchestration, Local Sovereign AI, and Inference Engineering**.
 

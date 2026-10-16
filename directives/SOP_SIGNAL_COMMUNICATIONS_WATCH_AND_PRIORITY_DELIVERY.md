@@ -1,12 +1,6 @@
 # Standard Operating Procedure: Signal Communications Watch & Priority Delivery Protocol
 
-**Status:** Approved
-**Date:** 2026-10-09
-**Standard:** Completed Staff Work
-
----
-
-## 1. Purpose & Doctrinal Intent
+## 1. Purpose
 
 In accordance with the Commander's Planning Guidance (CPG) and MCTP 3-30A (_Command and Staff Action_), Camp Colt requires reliable, deterministic, non-blocking message delivery and communications oversight across all active command billets and tactical sessions.
 
@@ -23,7 +17,7 @@ To maintain clear operational separation of concerns:
 - **S-6 Signal & Cyber Section (`s6-signal`)**: Sole custodian and doctrinal owner of message transport, signal delivery, inter-staff communications watch, priority threshold evaluation, and automated mail nudging.
 - **S-3 Operations (`s3-operations`)**: Focuses exclusively on tactical bead execution, worker stagnation detection, task tree progression, and convoy tracking per `SOP_OPERATIONS_WATCH_AND_STAGNATION_DETECTION.md`. S-3 does not patrol peer staff mailboxes.
 - **Mayor (`mayor`)**: Municipal lead holding sole authority for registering, updating, and reloading Gas City orders and lifecycle processes (`city.toml`, `orders/`).
-- **S-1 Personnel (`s1-personnel`)**: Doctrinal custodian for administrative formatting, review, and publication into `rigs/a-staff`.
+- **S-1 Personnel (`s1-personnel`)**: Administrative custodian for formatting, review, and publication into `rigs/a-staff`.
 
 ---
 

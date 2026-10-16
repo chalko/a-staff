@@ -1,14 +1,8 @@
-# SOP: S-3 Tactical Operations Watch Cadence & Stall Escalation Protocol
-
-**Status:** Approved
-**Date:** 2026-09-29
-**Standard:** Completed Staff Work
-
----
+# Standard Operating Procedure: S-3 Operations Watch Cadence & Stall Escalation Protocol
 
 ## 1. Purpose
 
-This Standard Operating Procedure (SOP) governs the dynamic sampling cadence, telemetry auditing, and stall-mitigation escalations executed by the S-3 Tactical Watch Officer during active autonomous task execution across Camp Colt rigs (specifically `rigs/gascity` and inference engine `colt-sparkrun`).
+This Standard Operating Procedure (SOP) governs the dynamic sampling cadence, telemetry auditing, and stall-mitigation escalations executed by S-3 Operations Watch during active autonomous task execution across Camp Colt rigs (specifically `rigs/gascity` and inference engine `colt-sparkrun`).
 
 ---
 

@@ -1,13 +1,8 @@
 # Staff Requirements Document: Cross-Repository Git Cleanliness & Worktree Audit Tool
 
-**Status:** Approved
-**Date:** 2026-09-26
+## 1. Context & Purpose
 
----
-
-## 1. Context & Operational Purpose
-
-Under Camp Colt doctrine, software repositories are classified as **Logistics Supply Depots (Class IX/VII digital material)**. As multi-agent swarms operate across the colony, workers, polecats, and toolchains generate continuous runtime artifacts (AST indices, scratch scripts, test outputs, SQLite database state) and dynamically spawn secondary git worktrees for isolated task execution.
+As multi-agent swarms operate across Camp Colt repositories, workers and toolchains generate continuous runtime artifacts (AST indices, scratch scripts, test outputs, SQLite database state) and dynamically spawn secondary git worktrees for isolated task execution.
 
 Per Command guidance, any operational tooling that spans **cross-repository boundaries** is formally assigned to the cognizance of **S-6 Signal (`s6-signal`)** as core communications and platform signal infrastructure.
 

@@ -1,19 +1,14 @@
 # Standard Operating Procedure: Weekly Task Friction & Process Improvement Review (AAR)
 
-**Status:** Approved
-**Date:** 2026-09-23
-
----
-
 ## 1. Purpose & Guiding Principles
 
-This Standard Operating Procedure establishes the battle rhythm, reporting format, and calibration methodology for the **Weekly Task Friction & Process Improvement Review (After Action Review)** at Camp Colt.
+This Standard Operating Procedure establishes the cadence, reporting format, and calibration methodology for the **Weekly Task Friction & Process Improvement Review (After Action Review)** at Camp Colt.
 
 ### Core Principles
 
 1. **Zero Supervisor Polling:** Operational leads and staff officers must never manually poll or peek into worker sessions to detect stalled execution. Gas City native supervisor daemons, watchdogs, and patrol orders (`gc patrol` / `gc order`) are the sole authorized automated detection layer.
 2. **Systemic Root-Cause Analysis:** Failures, stuck states, or remediation cycles are treated as structural platform or workflow signals, not individual agent anomalies.
-3. **Continuous Doctrine Persistence:** Every friction pattern resolved during the week must be hardened into automated tooling, watchdog rules, or battlebook SOPs in [`rigs/a-staff/playbooks/`](file:///home/camp-colt-mayor-agent/colony/rigs/a-staff/playbooks/) before closing the weekly cycle.
+3. **Continuous Process Improvement:** Every friction pattern resolved during the week must be hardened into automated tooling, watchdog rules, or playbook SOPs in [`rigs/a-staff/playbooks/`](file:///home/camp-colt-mayor-agent/colony/rigs/a-staff/playbooks/) before closing the weekly cycle.
 
 ---
 
@@ -58,7 +53,7 @@ Each weekly review systematically evaluates four functional pillars:
   - Verify automated reclaim behaviors for crashed or orphaned worker sessions.
   - Ensure deadlocked sessions trigger proactive mail alerts to S-3 without manual human discovery.
 
-### Pillar 4: Doctrinal & Battlebook Persistence
+### Pillar 4: Playbook & Procedure Updates
 
 - Formally document remediation recipes for encountered friction.
 - Author or update operational procedures in `rigs/a-staff/playbooks/`.
@@ -106,7 +101,7 @@ All weekly submissions must utilize the following standardized Markdown format:
 - **Observed Stuck Sessions:** [List any sessions that required intervention]
 - **Watchdog / Patrol Changes:** [Specific parameter adjustments to gc orders or session configs]
 
-### 5. Doctrinal & Battlebook Updates
+### 5. Playbook & Procedure Updates
 
 - **New SOPs / Recipes:** [Link newly authored documents in rigs/a-staff/playbooks/]
 - **Lessons Learned:** [Key operational takeaways for garrison continuity]
@@ -114,7 +109,7 @@ All weekly submissions must utilize the following standardized Markdown format:
 
 ---
 
-## 5. Doctrinal Compliance Block
+## 5. Process Compliance Block
 
 **Authored By:**
 _S-3 Operations Officer (`s3-operations`)_

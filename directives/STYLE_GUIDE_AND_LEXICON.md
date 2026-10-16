@@ -1,11 +1,6 @@
 # Camp Colt Staff Style Guide & Operational Lexicon
 
-**Status:** Approved
-**Date:** 2026-10-07
-
----
-
-## 1. Doctrinal Intent & Fundamental Policy
+## 1. Fundamental Policy
 
 > _"Agent Staff takes its inspiration and form from the USMC staff process, but we are not playing soldiers here."_
 > — Commander's Planning Guidance (CPG) & Command Clarification
@@ -37,7 +32,7 @@ These concepts provide genuine structural discipline and are official Camp Colt 
    - The operational posture of monitoring queues, queue reconciliation, worker pinging, radio/net watch, and incident response.
 4. **Commander's Planning Guidance (CPG)**:
    - Clear, authoritative articulation of strategic intent, operational invariants, hard boundaries, and explicit divestments.
-5. **Staff Battle Rhythm & Briefs**:
+5. **Staff Cadence & Briefs**:
    - Regular, predictable coordination cadences (such as Commander's Update Briefs and After-Action Reviews).
 
 ---
@@ -64,10 +59,12 @@ The following terms are banned across technical reports, plans, telemetry docume
 To prevent cognitive friction, semantic collisions, and broken pattern recognition, the following naming architecture is strictly established:
 
 1. **System & Platform Name: "A-Staff"**
+
    - Refers to the overarching software platform and autonomous staff system (**Agentic Staff** / **Autonomous Staff in a Box**).
    - Used for repository naming (`colt/a-staff`), project references, and macro architecture.
 
 2. **Internal Staff Sections: Retain "S-1" through "S-6"**
+
    - The functional sections within an A-Staff command post retain standard Marine Corps battalion staff designations (MCRP 3-10A.1):
      - **S-1**: Personnel & Administration (IAM, RBAC, access policies)
      - **S-2**: Intelligence (Codebase terrain analysis, AST indexing, RAG)
@@ -77,6 +74,7 @@ To prevent cognitive friction, semantic collisions, and broken pattern recogniti
      - **Chief of Staff (COS)**: Staff director and coordination gate
 
 3. **Doctrinal & Linguistic Rationale**:
+
    - **Avoid "A-1" through "A-6"**:
      - _Military Precedent_: In joint military taxonomy, the "A" prefix specifically denotes the Air Force Air Staff (A-1 Air Personnel, A-2 Air Intel, etc.), diverging from our infantry battalion command model.
      - _Pattern Recognition & Semantic Collision_: In civilian and engineering contexts, "A-1" triggers immediate, jarring collisions with steak sauce, credit ratings, or generic prime beef grading.
@@ -180,7 +178,7 @@ When authoring documentation or issuing task directives, billets must apply the 
 2. **Does the term borrow tactical combat or kinetic destruction concepts for software or humans?**
    - _Yes_: Replace immediately (e.g. Fires, Atmospherics, COC, War Order, Faux Classification).
 3. **When Uncertain**:
-   - Ask Command or the Chief of Staff via `gc mail send cos -s "Doctrinal Clarification: <Term>"`. Do not guess or proliferate theater.
+   - Ask Command or the Chief of Staff via `gc mail send cos -s "Terminology Clarification: <Term>"`. Do not guess or proliferate theater.
 
 ---
 
