@@ -8,9 +8,10 @@
 
 ## 1. Overview & Doctrinal Custody
 
-The `a-staff` rig contains the authoritative administrative doctrine, operational directives, battlebook procedures, and foundational references for Camp Colt.
+The `a-staff` rig contains the authoritative administrative doctrine, operational directives, playbooks, and foundational references for the **A-Staff Platform** (Agentic Staff / Autonomous Staff in a Box).
 
-Per Command Directive and Commander's Planning Guidance (CPG), **S-1 Personnel & Administration** holds primary custody and editorial governance over all documentation, records management, style compliance, and doctrinal hygiene within this repository.
+- **System Branding & Taxonomy**: While the macro software system is named **A-Staff**, internal functional sections strictly retain standard Marine Corps battalion staff designations (**S-1 through S-6** and **Chief of Staff**) with preferred short handles (`s1`, `s2`, `s3`, `s4`, `s6`, `cos`). Standalone "A-1" designations are prohibited due to military air staff divergence and severe civilian semantic collisions (see [`directives/STYLE_GUIDE_AND_LEXICON.md`](directives/STYLE_GUIDE_AND_LEXICON.md#23-system-taxonomy--billet-nomenclature-a-staff-vs-s-billets)).
+- **Custody**: Per Command Directive and Commander's Planning Guidance (CPG), **S-1 Personnel & Administration** holds primary custody and editorial governance over all documentation, records management, style compliance, and doctrinal hygiene within this repository.
 
 ---
 

@@ -59,6 +59,37 @@ The following terms are banned across technical reports, plans, telemetry docume
 
 ---
 
+### 2.3 System Taxonomy & Billet Nomenclature (A-Staff vs. S-Billets)
+
+To prevent cognitive friction, semantic collisions, and broken pattern recognition, the following naming architecture is strictly established:
+
+1. **System & Platform Name: "A-Staff"**
+   - Refers to the overarching software platform and autonomous staff system (**Agentic Staff** / **Autonomous Staff in a Box**).
+   - Used for repository naming (`colt/a-staff`), project references, and macro architecture.
+
+2. **Internal Staff Sections: Retain "S-1" through "S-6"**
+   - The functional sections within an A-Staff command post retain standard Marine Corps battalion staff designations (MCRP 3-10A.1):
+     - **S-1**: Personnel & Administration (IAM, RBAC, access policies)
+     - **S-2**: Intelligence (Codebase terrain analysis, AST indexing, RAG)
+     - **S-3**: Operations (Swarm orchestration, task convoys, watchstanding)
+     - **S-4**: Logistics (Digital depots, token budgets, compute/storage quotas)
+     - **S-6**: Signal & Cyber (Gateway routing, telemetry, comms sanitization)
+     - **Chief of Staff (COS)**: Staff director and coordination gate
+
+3. **Doctrinal & Linguistic Rationale**:
+   - **Avoid "A-1" through "A-6"**:
+     - _Military Precedent_: In joint military taxonomy, the "A" prefix specifically denotes the Air Force Air Staff (A-1 Air Personnel, A-2 Air Intel, etc.), diverging from our infantry battalion command model.
+     - _Pattern Recognition & Semantic Collision_: In civilian and engineering contexts, "A-1" triggers immediate, jarring collisions with steak sauce, credit ratings, or generic prime beef grading.
+     - _Clarity_: Calling a billet `S-1` or `S-3` provides immediate, unambiguous recognition for developers and operators without gimmickry.
+
+4. **Identifier & Handle Conventions**:
+   - In code, configurations, prompt headers, and session aliases, prefer the direct, clean section handle:
+     - Preferred: `s1`, `s2`, `s3`, `s4`, `s6`, `cos`
+     - Contextual / Billet Aliases: `s1-personnel`, `s2-intel`, `s3-operations`, `s4-logistics`, `s6-signal`, `colt-cos`
+     - **Prohibited**: Do not invent `a1`, `a-1`, `astaff-s1`, or `s1-admin`.
+
+---
+
 ## 3. Mandatory Document Header Specifications
 
 All formal reports, specifications, and telemetry records in Camp Colt repositories must begin with a standardized header block containing factual metadata.
