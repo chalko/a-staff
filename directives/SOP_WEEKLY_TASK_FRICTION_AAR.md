@@ -1,14 +1,7 @@
 # Standard Operating Procedure: Weekly Task Friction & Process Improvement Review (AAR)
 
-```
-Document ID:     SOP-ASTAFF-OPS-002
-Document Type:   Standard Operating Procedure
-Authority:       Chief of Staff Directive (cc-wisp-s05f) / Completed Staff Work
-Lead Proponent:  S-3 Operations Officer (s3-operations), Camp Colt
-Target Audience: Staff Billets (CoS, S-1, S-2, S-3, S-4, S-6), Platform Chief, Mayor
-Effective Date:  2026-09-23
-Review Cadence:  Weekly on Fridays (Submission NLT 1400 PDT)
-```
+**Status:** Approved
+**Date:** 2026-09-23
 
 ---
 
@@ -20,7 +13,7 @@ This Standard Operating Procedure establishes the battle rhythm, reporting forma
 
 1. **Zero Supervisor Polling:** Operational leads and staff officers must never manually poll or peek into worker sessions to detect stalled execution. Gas City native supervisor daemons, watchdogs, and patrol orders (`gc patrol` / `gc order`) are the sole authorized automated detection layer.
 2. **Systemic Root-Cause Analysis:** Failures, stuck states, or remediation cycles are treated as structural platform or workflow signals, not individual agent anomalies.
-3. **Continuous Doctrine Persistence:** Every friction pattern resolved during the week must be hardened into automated tooling, watchdog rules, or battlebook SOPs in [`rigs/a-staff/battlebook/`](file:///home/camp-colt-mayor-agent/colony/rigs/a-staff/battlebook/) before closing the weekly cycle.
+3. **Continuous Doctrine Persistence:** Every friction pattern resolved during the week must be hardened into automated tooling, watchdog rules, or battlebook SOPs in [`rigs/a-staff/playbooks/`](file:///home/camp-colt-mayor-agent/colony/rigs/a-staff/playbooks/) before closing the weekly cycle.
 
 ---
 
@@ -68,7 +61,7 @@ Each weekly review systematically evaluates four functional pillars:
 ### Pillar 4: Doctrinal & Battlebook Persistence
 
 - Formally document remediation recipes for encountered friction.
-- Author or update operational procedures in `rigs/a-staff/battlebook/`.
+- Author or update operational procedures in `rigs/a-staff/playbooks/`.
 - Ensure Gas City recipes and molecule definitions are updated with newly required verification gates.
 
 ---
@@ -115,7 +108,7 @@ All weekly submissions must utilize the following standardized Markdown format:
 
 ### 5. Doctrinal & Battlebook Updates
 
-- **New SOPs / Recipes:** [Link newly authored documents in rigs/a-staff/battlebook/]
+- **New SOPs / Recipes:** [Link newly authored documents in rigs/a-staff/playbooks/]
 - **Lessons Learned:** [Key operational takeaways for garrison continuity]
 ```
 

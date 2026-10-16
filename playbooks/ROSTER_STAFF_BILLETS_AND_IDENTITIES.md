@@ -1,14 +1,7 @@
 # Administrative Staff Roster & Non-Human Identity Directory
 
-**Document ID**: `BBL-S1-ROSTER-001`
-**Document Type**: Battlebook Reference & Personnel Directory
-**Custodian**: S-1 Personnel & Administration (`s1-personnel`), Camp Colt
-**Approving Authority**: Chief of Staff (`colt-cos`), Camp Colt
-**Standard**: Completed Staff Work (CPG Baseline)
-**Target Environment**: Camp Colt Sovereign AI Command Post & Mounted Rigs
-**Target Audience**: All Command Billets (`cos`, `mayor`, `s1-personnel`, `s2-intel`, `s3-operations`, `s4-logistics`, `s6-signal`, `colt-sysadmin`)
-**Effective Date**: 2026-10-09
-**Status**: APPROVED (Completed Staff Work)
+**Status:** Approved
+**Date:** 2026-10-09
 
 ---
 

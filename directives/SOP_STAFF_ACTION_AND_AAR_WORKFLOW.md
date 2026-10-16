@@ -1,13 +1,7 @@
 # Standard Operating Procedure (SOP): Multi-Agent Staff Action & After Action Review (AAR) Workflow
 
-```text
-Document ID:     SOP-ASTAFF-CSW-001
-Tracking Ref:    cc-csw-formula
-Authority:       Commander's Planning Guidance (CPG) & MCTP 3-30A
-Proponent:       Chief of Staff (colt-cos), Camp Colt
-Target Audience: All Staff Billets (CoS, Mayor, S-1, S-2, S-3, S-4, S-6, Platform SRE)
-Status:          MANDATORY OPERATIONAL DOCTRINE
-```
+**Status:** Approved
+**Date:** 2026-10-07
 
 ---
 

@@ -1,13 +1,8 @@
 # Standard Operating Procedure: Operational Planning Cadence, Time Horizons, & Lifecycle Gates
 
-**Document ID**: `SOP-S1-OPS-CADENCE-001`
-**Document Type**: Standard Operating Procedure & Staff Directive
-**Custodian**: S-1 Personnel & Administration (`s1-personnel`), Camp Colt
-**Approving Authority**: Chief of Staff (`colt-cos`), Camp Colt
-**Lead Proponent**: S-3 Operations (`s3-operations`), Camp Colt
-**Effective Date**: 2026-10-07
-**Standard**: Completed Staff Work (CPG Baseline)
-**Target Environment**: Camp Colt Sovereign AI Command Post & Mounted Rigs
+**Status:** Approved
+**Date:** 2026-10-07
+**Standard:** Completed Staff Work
 
 ---
 

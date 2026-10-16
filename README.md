@@ -24,17 +24,23 @@ Per Command Directive and Commander's Planning Guidance (CPG), **S-1 Personnel &
   - [`SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md`](directives/SOP_SIGNAL_COMMUNICATIONS_WATCH_AND_PRIORITY_DELIVERY.md): Signal Communications Watch protocol, 5-minute watchdog, graduated priority thresholds, and P1 failure escalation.
   - [`SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md`](directives/SOP_STAFF_ACTION_AND_AAR_WORKFLOW.md): Completed Staff Work and AAR lifecycle protocol.
   - [`REQ_CROSS_REPO_GIT_CLEANLINESS_AUDIT.md`](directives/REQ_CROSS_REPO_GIT_CLEANLINESS_AUDIT.md): Cross-repository hygiene requirements.
-- **[`battlebook/`](battlebook/)**: Operational procedures and model dossiers maintained by functional staff.
-  - [`ROSTER_STAFF_BILLETS_AND_IDENTITIES.md`](battlebook/ROSTER_STAFF_BILLETS_AND_IDENTITIES.md): Administrative staff roster, NHI directory, and billet specifications.
-  - [`SOP_GIT_WORKTREE_CLEANLINESS.md`](battlebook/SOP_GIT_WORKTREE_CLEANLINESS.md): Standard Operating Procedure for worktree management.
-  - [`SOP_S3_TACTICAL_WATCH_CADENCE.md`](battlebook/SOP_S3_TACTICAL_WATCH_CADENCE.md): S-3 Tactical Operations Watch Cadence.
-  - [`SOP_S4_REPOSITORY_PROVISIONING.md`](battlebook/SOP_S4_REPOSITORY_PROVISIONING.md): S-4 Gitea and depot provisioning doctrine.
-  - [`models/`](battlebook/models/): Standardized model specifications and performance dossiers.
-- **[`plans/`](plans/)**: Strategic campaign plans, operational orders, and after-action reports.
-- **[`references/`](references/)**: Baseline USMC doctrine reference manuals (MCTP 3-30A, MCRP 3-10A.1).
+- **[`playbooks/`](playbooks/)**: Operational procedures and model dossiers maintained by functional staff.
+  - [`ROSTER_STAFF_BILLETS_AND_IDENTITIES.md`](playbooks/ROSTER_STAFF_BILLETS_AND_IDENTITIES.md): Administrative staff roster, NHI directory, and billet specifications.
+  - [`SOP_GIT_WORKTREE_CLEANLINESS.md`](playbooks/SOP_GIT_WORKTREE_CLEANLINESS.md): Standard Operating Procedure for worktree management.
+  - [`SOP_S3_TACTICAL_WATCH_CADENCE.md`](playbooks/SOP_S3_TACTICAL_WATCH_CADENCE.md): S-3 Tactical Operations Watch Cadence.
+  - [`SOP_S4_REPOSITORY_PROVISIONING.md`](playbooks/SOP_S4_REPOSITORY_PROVISIONING.md): S-4 Gitea and depot provisioning doctrine.
+  - [`models/`](playbooks/models/): Standardized model specifications and performance dossiers.
+- **[`references/`](references/)**: Baseline doctrine reference manuals (MCTP 3-30A, MCRP 3-10A.1).
 
 ---
 
 ## 3. Style & Doctrinal Compliance
 
 All contributions to `a-staff` must adhere strictly to [`STYLE_GUIDE_AND_LEXICON.md`](directives/STYLE_GUIDE_AND_LEXICON.md). Faux classification stamps, theatrical military roleplay jargon ("COC", "Fires", "War Orders"), and unverified claims are strictly prohibited.
+
+---
+
+## 4. License
+
+Copyright © 2026 Nick Chalko.
+Licensed under the [Apache License, Version 2.0](LICENSE).

@@ -1,15 +1,8 @@
 # Standard Operating Procedure: Git Worktree & Working Tree Cleanliness
 
-```text
-Document ID:     SOP-0.3-WORKTREE-CLEANLINESS
-Document Type:   Standard Operating Procedure
-Effective Date:  September 26, 2026
-Lead Billets:    Mayor (Headquarters Commandant) & S-3 Operations
-Reviewing Auth:  Chief of Staff (`colt-cos`), Camp Colt
-Doctrine Ref:    USMC Staff Organization (MCRP 3-10A.1) & Completed Staff Work (MCTP 3-30A)
-Parent Ref:      AGENTS.md, CPG Invariant #3, SOP-0.2-WATCH-POSTURE
-Target Cluster:  Camp Colt Sovereign AI Command Post & Mounted Rigs
-```
+**Status:** Approved
+**Date:** 2026-09-26
+**Standard:** Completed Staff Work
 
 ---
 

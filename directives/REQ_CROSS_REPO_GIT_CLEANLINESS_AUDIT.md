@@ -1,13 +1,7 @@
 # Staff Requirements Document: Cross-Repository Git Cleanliness & Worktree Audit Tool
 
-```text
-Document ID:     REQ-S6-GIT-AUDIT-2026-09-26
-Document Type:   Staff Requirements Directive
-Tasking Billets: Chief of Staff (`colt-cos`) to S-6 Signal (`s6-signal`)
-Implementation:  rigs/colt-utils (via Ephemeral Tactical Workers)
-Doctrine Ref:    USMC Staff Organization (MCRP 3-10A.1) & Completed Staff Work (MCTP 3-30A)
-Parent Ref:      AGENTS.md, SOP-0.3-WORKTREE-CLEANLINESS, CPG Invariant #1 & #3
-```
+**Status:** Approved
+**Date:** 2026-09-26
 
 ---
 

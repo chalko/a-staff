@@ -1,10 +1,8 @@
 # SOP: S-3 Tactical Operations Watch Cadence & Stall Escalation Protocol
 
-**Document Type:** Standard Operating Procedure
-**Standard:** Completed Staff Work (CPG Baseline)
-**Custodian:** S-3 Operations (`s3-operations`)
-**Scope:** Camp Colt Operations Watch Cadence & Protocol
-**Effective Date:** 2026-09-29
+**Status:** Approved
+**Date:** 2026-09-29
+**Standard:** Completed Staff Work
 
 ---
 

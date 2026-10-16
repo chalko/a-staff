@@ -1,10 +1,8 @@
 # Standard Operating Procedure: Repository & Supply Depot Provisioning
 
-**Document ID:** `SOP-4.1-REPO-PROVISION`
-**Effective Date:** September 22, 2026
-**Lead Action Officer:** S-4 Logistics (`s4-logistics`), Camp Colt
-**Reviewing Authority:** Chief of Staff (`colt-cos`), Camp Colt
-**Doctrine Standard:** USMC Staff Organization (MCRP 3-10A.1) & Completed Staff Work (MCTP 3-30A)
+**Status:** Approved
+**Date:** 2026-09-22
+**Standard:** Completed Staff Work
 
 ---
 

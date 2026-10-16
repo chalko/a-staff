@@ -1,15 +1,8 @@
 # Standard Operating Procedure: Signal Communications Watch & Priority Delivery Protocol
 
-**Document ID**: `SOP-S6-SIG-WATCH-001`
-**Document Type**: Standard Operating Procedure & Signal Directive
-**Custodian**: S-6 Signal & Cyber Officer (`s6-signal`), Camp Colt
-**Administrative Review**: S-1 Personnel & Administration (`s1-personnel`), Camp Colt
-**Approving Authority**: Chief of Staff (`colt-cos`), Camp Colt
-**Standard**: Completed Staff Work (CPG Baseline)
-**Target Environment**: Camp Colt Sovereign AI Command Post & Tactical Mesh
-**Target Audience**: All Staff Billets (`cos`, `mayor`, `s1-personnel`, `s3-operations`, `s4-logistics`, `s6-signal`, `colt-sysadmin`)
-**Effective Date**: 2026-10-09
-**Status**: APPROVED (Completed Staff Work)
+**Status:** Approved
+**Date:** 2026-10-09
+**Standard:** Completed Staff Work
 
 ---
 

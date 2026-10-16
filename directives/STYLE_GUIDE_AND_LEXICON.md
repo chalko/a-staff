@@ -1,12 +1,7 @@
 # Camp Colt Staff Style Guide & Operational Lexicon
 
-**Document ID**: `DIR-S1-STYLE-LEXICON-001`
-**Document Type**: Staff Directive & Lexicon Standard
-**Custodian**: S-1 Personnel & Administration (`s1-personnel`), Camp Colt
-**Approving Authority**: Chief of Staff (`colt-cos`), Camp Colt
-**Effective Date**: 2026-10-07
-**Target Audience**: All Command Billets (`cos`, `mayor`, `s1-personnel`, `s2-intel`, `s3-operations`, `s4-logistics`, `s6-signal`, `colt-sysadmin`), Rig Workers, and Contributors
-**Parent Directives**: Commander's Planning Guidance (CPG) & Command Administrative Policy
+**Status:** Approved
+**Date:** 2026-10-07
 
 ---
 

@@ -1,15 +1,8 @@
 # Standard Operating Procedure: Operations Watch Patrol & Stagnation Detection Protocol
 
-**Document ID**: `SOP-S3-OPS-WATCH-001`
-**Document Type**: Standard Operating Procedure & Tactical Directive
-**Custodian**: S-3 Operations (`s3-operations`), Camp Colt
-**Administrative Review**: S-1 Personnel & Administration (`s1-personnel`), Camp Colt
-**Approving Authority**: Chief of Staff (`colt-cos`), Camp Colt
-**Standard**: Completed Staff Work (CPG Baseline)
-**Target Environment**: Camp Colt Sovereign AI Command Post & Mounted Rigs
-**Target Audience**: All Staff Billets (`cos`, `mayor`, `s1-personnel`, `s3-operations`, `s4-logistics`, `s6-signal`, `colt-sysadmin`)
-**Effective Date**: 2026-10-08
-**Status**: APPROVED (Completed Staff Work)
+**Status:** Approved
+**Date:** 2026-10-08
+**Standard:** Completed Staff Work
 
 ---
 

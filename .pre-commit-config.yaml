@@ -1,3 +1,4 @@
+exclude: '^references/'
 repos:
   # 1. Clean up file formatting
   - repo: https://github.com/pre-commit/pre-commit-hooks
