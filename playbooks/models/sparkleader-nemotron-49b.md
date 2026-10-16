@@ -108,7 +108,7 @@ In accordance with theater doctrine established in `PLN-0.1-BENCH-HIST`, the mod
 ### Known Failure Modes & Operational Boundaries
 
 1. **Multi-Turn Context Degradation (>24k Tokens):** While the physical context window accommodates 32,768 tokens, attention degradation and minor key-retrieval drop-offs occur beyond 24,576 tokens. Working sessions must be truncated or compacted before reaching 24k tokens.
-2. **Conversational Drift under Permissive Prompts:** If system prompts omit strict negative formatting constraints, the model tends toward verbose preambles ("Certainly, here is the file..."). All production agent harnesses must include explicit negative formatting constraints.
+2. **Conversational Drift under Permissive Prompts:** If system prompts omit strict negative formatting constraints, the model tends toward verbose preambles ("Certainly, here is the file..."). All active agent harnesses must include explicit negative formatting constraints.
 3. **Deeply Nested Schema Edge Cases:** Rare schema formatting errors occur when function tool arguments exceed nesting depth 3. Tool schemas exposed to Nemotron-49B should remain shallow and strictly typed.
 
 ---
@@ -125,7 +125,7 @@ frequency_penalty = 0.1
 max_tokens = 4096
 ```
 
-### System Prompt Framing Standard (Camp Colt Production Harness)
+### System Prompt Framing Standard (Camp Colt Agent Harness)
 
 ```markdown
 You are a sovereign tactical worker operating under unprivileged POSIX constraints at Camp Colt.
@@ -163,7 +163,7 @@ Execute tasks methodically, verify deliverables with automated unit tests, and c
 
 **Authored By:**
 _S-3 Operations Officer (`s3-operations`)_
-Camp Colt Combat Operations Center
+Camp Colt Tactical Operations Watch
 Date: 2026-09-22
 
 **Quality Assurance Concurrence:**
@@ -173,4 +173,4 @@ Date: 2026-09-22
 
 **Operational Endorsement:**
 _Chief of Staff (`cos`)_
-Camp Colt Battalion Headquarters
+Camp Colt Headquarters

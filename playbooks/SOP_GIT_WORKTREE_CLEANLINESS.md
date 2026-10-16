@@ -43,7 +43,7 @@ flowchart TD
 | **Tactical Workers (Polecats)**      | Ephemeral Agents        | Must enforce `git status --porcelain == 0` before closing any task bead. Must register EXIT traps to destroy temporary worktrees upon completion.    |
 | **Mayor (`mayor`)**                  | Headquarters Commandant | Maintains camp hygiene. Conducts recurring "police calls" using `scripts/audit_git_cleanliness.sh`. Prunes dead worktrees and flags untracked drift. |
 | **S-3 Operations (`s3-operations`)** | Tactical Lead           | Enforces clean-tree gates on all operational convoys. Rejects pull requests or task completions that fail clean-tree audits.                         |
-| **Chief of Staff (`colt-cos`)**      | Operational Lead        | Verifies garrison cleanliness across shift boundaries. Ensures clean git posture is documented in every Commander's Update Brief (CUB).              |
+| **Chief of Staff (`colt-cos`)**      | Operational Lead        | Verifies repository cleanliness across shift boundaries. Ensures clean git posture is documented in every Commander's Update Brief (CUB).            |
 
 ---
 
@@ -121,7 +121,7 @@ Git working tree cleanliness is an explicit, mandatory inspection item during op
 2. **Commander's Update Brief (CUB):** Daily 06:00 CUB documents must certify:
 
    ```markdown
-   - **Garrison Git Cleanliness:** 100% clean across colony root and all 5 rigs; zero uncommitted diffs; zero orphaned worktrees.
+   - **Repository Git Cleanliness:** 100% clean across colony root and all 5 rigs; zero uncommitted diffs; zero orphaned worktrees.
    ```
 
 3. **Friday Operational AARs:** Lingering untracked files or abandoned worktrees discovered during weekly retrospectives are treated as tactical discipline failures and logged in `docs/AAR_LOG.md`.
@@ -174,4 +174,4 @@ flowchart TD
    ./scripts/audit_git_cleanliness.sh
    ```
 
-   Must return `RESULT: PASSED — 100% clean garrison git posture.`
+   Must return `RESULT: PASSED — 100% clean repository git posture.`

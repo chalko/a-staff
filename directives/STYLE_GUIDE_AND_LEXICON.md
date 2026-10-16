@@ -49,6 +49,7 @@ The following terms are banned across technical reports, plans, telemetry docume
 | `Lines of Effort (LOE)` (when misapplied to ad-hoc tasks)                               | `Workstream`, `Initiative`, or `Project Epic`              | Keep project planning clear and focused.                                                                                         |
 | `War Order` / `Battle Order`                                                            | `Operational Directive`, `Task Order`, or `Execution Plan` | Standard engineering order terminology.                                                                                          |
 | `War Room` (for technical incidents)                                                    | `Incident Triage` or `Swarm Coordination`                  | Professional systems engineering terminology.                                                                                    |
+| `Battle Rhythm`                                                                         | `Staff Cadence` or `Operational Cadence`                   | Regular, predictable coordination cadences for meetings, briefs, and reviews.                                                    |
 | `Authority: MCTP 3-30A` (used as a legalistic stamp)                                    | `Standard: Completed Staff Work`                           | MCTP 3-30A provides staff doctrine; it is not a legal statutory authority.                                                       |
 | `MAGTF Authority` / `Doctrinal Seal`                                                    | `Reviewing Authority: <Billet>`                            | Retain clear billet accountability.                                                                                              |
 
@@ -174,7 +175,7 @@ Used in `colony/docs/`:
 When authoring documentation or issuing task directives, billets must apply the following decision framework:
 
 1. **Does the term describe a functional administrative/coordination structure?**
-   - _Yes_: Retain (e.g. S-3 Operations, Completed Staff Work, Watchstander, Battle Rhythm, AAR, CPG).
+   - _Yes_: Retain (e.g. S-3 Operations, Completed Staff Work, Watchstander, Staff Cadence, AAR, CPG).
 2. **Does the term borrow tactical combat or kinetic destruction concepts for software or humans?**
    - _Yes_: Replace immediately (e.g. Fires, Atmospherics, COC, War Order, Faux Classification).
 3. **When Uncertain**:

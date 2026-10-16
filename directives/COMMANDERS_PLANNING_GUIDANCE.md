@@ -36,7 +36,7 @@ That machine is my forcing function: it compels me to master AI systems
 engineering in a budgeted, disciplined, and realistic environment to solve real
 problems. Most of the immediate problems I tackle will be code-centric, but AI
 reaches far beyond code generation. My objective is to participate actively in
-making AI generally useful, reliable, and production-ready.
+making AI generally useful, reliable, and practical.
 
 ---
 
@@ -61,7 +61,7 @@ I will build an authentic professional network, verifiable public credentials,
 and a durable reputation by doing real work on real silicon and sharing the
 empirical truth.
 
-We execute actual production workloads on local hardware, capture raw telemetry,
+We execute actual engineering workloads on local hardware, capture raw telemetry,
 and publish reproducible findings, configurations, and repositories. We do not
 publish speculative think-pieces or regurgitated documentation.
 
@@ -82,7 +82,7 @@ outputs, we enforce two strict boundaries:
 
 1. **No Toy Demos**: We will not build generic chatbots, trivial
    prompt-wrappers, or synthetic toy benchmarks. Every workload executed across
-   our systems must represent an actual production task, a genuine
+   our systems must represent an actual engineering task, a genuine
    infrastructure challenge, or an empirical stress test.
 2. **No Agent Ghostwriting**: Autonomous agents will profile runtimes, gather
    telemetry, run benchmark suites, and draft technical dossiers. However, every
@@ -106,7 +106,7 @@ federated homelab:
   consistency, and alignment with this guidance.
 - **Operational Command**: Handled by an autonomous Chief of Staff at Camp Colt,
   driving execution on the **Suitcase AI Mini-Rack** (ASUS GX10 + UM760 Slim).
-- **Production Workloads**: Multi-agent systems run on bare-metal local compute
+- **Workloads**: Multi-agent systems run on bare-metal local compute
   to solve real engineering problems for me.
 - **Empirical Packaging**: Relevant raw metrics, traces, hardware logs,
   deployment configs, and complete Git repositories will be prepared, sanitized,
@@ -116,7 +116,7 @@ federated homelab:
 
 - **Main Effort (ME)**: **Camp Colt** (Suitcase AI Mini-Rack / ASUS GX10). This
   is the operational center of gravity where bare-metal inference, profiling,
-  and multi-agent production workloads execute.
+  and multi-agent workloads execute.
 - **Supporting Efforts (SE)**:
   - **Fog Infrastructure**: Personal homelab projects.
   - **Laptop & Luna**: Operator control interface, workstation workflows, and

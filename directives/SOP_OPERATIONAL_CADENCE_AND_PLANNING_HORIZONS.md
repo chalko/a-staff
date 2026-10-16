@@ -57,7 +57,7 @@ Camp Colt organizes all operational activity into three distinct, interconnected
   - Major hardware migrations (e.g., Package B "Tri-Pillar Jump", Minisforum MS-01, MikroTik 10G SFP+ networking).
   - Cross-cutting benchmark campaigns (e.g., Sparkleader qualification, reasoning effort scaling on NVIDIA Grace Blackwell GB10).
   - High-level platform invariants, token expenditure ceilings, and operational security boundaries.
-- **Review Rhythm**: Evaluated bi-weekly during Commander's Update Briefs (CUBs) or upon major platform completion.
+- **Review Cadence**: Evaluated bi-weekly during Commander's Update Briefs (CUBs) or upon major platform completion.
 
 ---
 
@@ -166,11 +166,11 @@ Upon expiration:
 | **S-4 Logistics (`s4-logistics`)**   | Resource Validation      | Audits token consumption, storage capacity, and repo provisioning feasibility for proposed plans.                                 |
 | **S-6 Signal (`s6-signal`)**         | Communications & Routing | Validates gateway routing, inference telemetry export, and proxy sanitization requirements.                                       |
 | **Platform SRE (`colt-sysadmin`)**   | Infrastructure Readiness | Validates K8s compute, GPU availability, and network node capacity before OPORD execution.                                        |
-| **Mayor (`mayor`)**                  | Municipal Plumber        | Maintains workspace plumbing, Dolt SQL integrity, and session hygiene throughout the operational rhythm.                          |
+| **Mayor (`mayor`)**                  | Municipal Plumber        | Maintains workspace plumbing, Dolt SQL integrity, and session hygiene throughout the operational cadence.                         |
 
 ---
 
 ## 5. Review & Doctrinal Compliance
 
 1. **Doctrinal Alignment**: This SOP complies strictly with the Commander's Planning Guidance (CPG) and the Camp Colt Document Header Style Guide ([`STYLE_GUIDE_AND_LEXICON.md`](STYLE_GUIDE_AND_LEXICON.md)).
-2. **Audit Rhythm**: S-1 will conduct a bi-weekly administrative scan of all active beads and plans to ensure zero un-gated operations exceed the 14-day expiration ceiling.
+2. **Audit Cadence**: S-1 will conduct a bi-weekly administrative scan of all active beads and plans to ensure zero un-gated operations exceed the 14-day expiration ceiling.

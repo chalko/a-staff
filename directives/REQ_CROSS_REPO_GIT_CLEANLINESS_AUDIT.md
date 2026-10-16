@@ -6,7 +6,7 @@ As multi-agent swarms operate across Camp Colt repositories, workers and toolcha
 
 Per Command guidance, any operational tooling that spans **cross-repository boundaries** is formally assigned to the cognizance of **S-6 Signal (`s6-signal`)** as core communications and platform signal infrastructure.
 
-This document issues formal engineering requirements to S-6 Signal to design, test, implement, and maintain a production-grade **Cross-Repository Git Cleanliness & Worktree Audit Tool** in [`rigs/colt-utils`](file:///home/camp-colt-mayor-agent/colony/rigs/colt-utils).
+This document issues formal engineering requirements to S-6 Signal to design, test, implement, and maintain a **Cross-Repository Git Cleanliness & Worktree Audit Tool** in [`rigs/colt-utils`](file:///home/camp-colt-mayor-agent/colony/rigs/colt-utils).
 
 ---
 
@@ -18,7 +18,7 @@ flowchart TD
     S6 -->|1. Author Design Doc| DD["Design Specification<br/><code>docs/design/git_cleanliness_audit.md</code>"]
     S6 -->|2. Author Test Suite| TST["Test Suite & Mock Harness<br/><code>100% Test Coverage</code>"]
     S6 -->|3. Task Dispatch via gc sling| WORK["colt-utils Workers<br/>(Ephemeral Implementation)"]
-    WORK -->|4. Production Code| PR["PR & Verification Receipts"]
+    WORK -->|4. Tested Tooling| PR["PR & Verification Receipts"]
     PR -->|5. Review & Approval| S6
     S6 -->|6. Completed Staff Work Dossier| COS
 ```
@@ -48,7 +48,7 @@ S-6 Signal will not execute ad-hoc manual scripts, but will govern the full prof
   - Staged changes (`A`, `M`, `D`)
   - Untracked runtime artifacts (`??`)
   - Ignored artifacts (must remain suppressed per `.gitignore`)
-- **Severity Grading**: Provide clear distinction between benign untracked scratch items vs. modified production code.
+- **Severity Grading**: Provide clear distinction between benign untracked scratch items vs. modified repository code.
 
 ### 3.3 Git Worktree Lifecycle & Pruning
 
@@ -71,7 +71,7 @@ S-6 Signal will not execute ad-hoc manual scripts, but will govern the full prof
 ### 3.5 Exit Code Contract
 
 - `0`: **All Clean** — 100% of discovered repositories have clean working trees and zero orphaned worktrees.
-- `1`: **Garrison Drift Detected** — One or more repositories contain uncommitted modifications, untracked files, or dead worktrees.
+- `1`: **Repository Drift Detected** — One or more repositories contain uncommitted modifications, untracked files, or dead worktrees.
 - `2`: **Execution / Configuration Error** — Invalid CLI flags, unreadable filesystem paths, or missing git dependencies.
 
 ---
@@ -91,6 +91,6 @@ To achieve Completed Staff Work acceptance, S-6 Signal must deliver:
 
 - [ ] Approved Design Document in `rigs/colt-utils/docs/design/`.
 - [ ] Automated test suite with $\ge 90\%$ branch coverage including positive, dirty, and error test cases.
-- [ ] Production tool implemented in `rigs/colt-utils` passing all local linter and pre-commit checks.
+- [ ] Audit tool implemented in `rigs/colt-utils` passing all local linter and pre-commit checks.
 - [ ] Live verification receipt demonstrating execution against the Camp Colt estate with human-readable and `--json` outputs.
 - [ ] Formal completion dispatch submitted to Chief of Staff via `gc mail` with bead reference.

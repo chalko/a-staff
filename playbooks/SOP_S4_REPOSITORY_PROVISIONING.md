@@ -67,7 +67,7 @@ curl -s -X POST "http://gitea.colt.chalko.com:3000/api/v1/orgs/colt/repos" \
 ### Step 3: Team Permissions & Branch Protection
 
 1. Assign read/write permissions to the `Colt Agents` team.
-2. Enable branch protection on `main` (requiring PR review and zero failed automated checks for production rigs).
+2. Enable branch protection on `main` (requiring PR review and zero failed automated checks for active rigs).
 
 ### Step 4: Empirical Preflight Verification
 

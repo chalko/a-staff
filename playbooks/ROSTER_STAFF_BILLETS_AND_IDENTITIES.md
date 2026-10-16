@@ -10,16 +10,16 @@ This directory formalizes the active command billets, agent template definitions
 
 ## 2. Command & Staff Billets Directory
 
-| Billet                    | Session Alias | Agent Template | Execution Provider | Watch Posture | Primary Cognizance & Mission                                                                                                                                    |
-| :------------------------ | :------------ | :------------- | :----------------- | :------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Chief of Staff**        | ()            |                | Antigravity        |               | Operational lead; cross-staff coordination; reviewing and approving completed staff work; enforcing planning cadence and 14-day gates.                          |
-| **Mayor**                 |               |                | Antigravity        |               | Headquarters commandant; municipal plumbing, Dolt database integrity, session reconciler hygiene, and order lifecycle management (No config changes detected.). |
-| **S-1 Personnel & Admin** | ()            |                | Antigravity        |               | Records custodian of ; NHI permissions, RBAC, access policies, credential audits, and administrative style compliance.                                          |
-| **S-2 Intelligence**      | ()            |                | Antigravity        |               | Upstream pipeline scouting (), terrain analysis, codebase indexing, and security/threat evaluation.                                                             |
-| **S-3 Operations**        | ()            |                | Antigravity        |               | Tactical operations lead; convoy and task bead sequencing; worker stagnation detection; Operations Watch patrol protocol.                                       |
-| **S-4 Logistics**         | ()            |                | Antigravity        |               | Repository provisioning (Gitea), token draw tracking, thermal/power telemetry rollups, and storage quotas.                                                      |
-| **S-6 Signal & Cyber**    | ()            |                | Antigravity        |               | Communications watchstander; gateway routing, proxy sanitization, automated priority mail watchdog (), and net watch.                                           |
-| **Platform SRE**          | ()            |                | Antigravity        |               | Platform infrastructure lead; Proxmox hypervisors, K8s cluster, GPU nodes (Grace Blackwell GB10), and hardware alerts.                                          |
+| Billet                    | Session Alias                    | Agent Template          | Execution Provider | Watch Posture | Primary Cognizance & Mission                                                                                                                    |
+| :------------------------ | :------------------------------- | :---------------------- | :----------------- | :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Chief of Staff**        | `cos` (`colt-cos`)               | `agents/cos/`           | Antigravity        | `always`      | Operational lead; cross-staff coordination; reviewing and approving completed staff work; enforcing planning cadence and 14-day gates.          |
+| **Mayor**                 | `mayor`                          | `agents/mayor/`         | Antigravity        | `always`      | Headquarters commandant; municipal plumbing, Dolt database integrity, session reconciler hygiene, and order lifecycle management (`gc reload`). |
+| **S-1 Personnel & Admin** | `s1` (`s1-personnel`)            | `agents/s1-personnel/`  | Antigravity        | `always`      | Records custodian of `rigs/a-staff`; NHI permissions, RBAC, access policies, credential audits, and administrative style compliance.            |
+| **S-2 Intelligence**      | `s2` (`s2-intel`)                | `agents/s2-intel/`      | Antigravity        | `on_demand`   | Upstream pipeline scouting (`gastownhall/gascity/issues`), terrain analysis, codebase indexing, and security/threat evaluation.                 |
+| **S-3 Operations**        | `s3` (`s3-operations`)           | `agents/s3-operations/` | Antigravity        | `always`      | Tactical operations lead; convoy and task bead sequencing; worker stagnation detection; Operations Watch patrol protocol.                       |
+| **S-4 Logistics**         | `s4` (`s4-logistics`)            | `agents/s4-logistics/`  | Antigravity        | `always`      | Digital supply depots (Gitea repo provisioning), token draw tracking, thermal/power telemetry rollups, and storage quotas.                      |
+| **S-6 Signal & Cyber**    | `s6` (`s6-signal`)               | `agents/s6-signal/`     | Antigravity        | `always`      | Communications watchstander; gateway routing, proxy sanitization, automated priority mail watchdog (`signal_mail_watch.sh`), and net watch.     |
+| **Platform SRE**          | `colt-sysadmin` (`s4a-platform`) | `agents/colt-sysadmin/` | Antigravity        | `always`      | Platform infrastructure lead; Proxmox hypervisors, K8s cluster, GPU nodes (Grace Blackwell GB10), and hardware alerts.                          |
 
 ---
 
@@ -43,7 +43,7 @@ Stood up formally per Command Directive `cc-wisp-bd3wa` on 2026-10-09:
 
 ### 3.2 Operating Rules for S-2
 
-- **Read-Only Recon Posture**: S-2 does not apply modifications to production codebases during reconnaissance sprints. Deliverables take the form of structured intelligence reports, architecture notes, and proposed task beads.
+- **Read-Only Recon Posture**: S-2 does not apply modifications to managed codebases during reconnaissance sprints. Deliverables take the form of structured intelligence reports, architecture notes, and proposed task beads.
 - **Empirical Receipts**: All findings must cite concrete file paths, line ranges, commit hashes, or external issue URLs.
 - **Intel Delivery Tag**: Dispatches candidate tasks and reconnaissance findings to `s3-operations` via `gc mail send s3-operations` with the tag `[INTEL]`.
 
@@ -60,7 +60,7 @@ In compliance with CPG Operational Invariants #3 and #4:
 
 ---
 
-## 5. Audit & Maintenance Rhythm
+## 5. Audit & Maintenance Cadence
 
 - **Administrative Audit**: S-1 conducts periodic scans of active sessions (`gc session list --json`) against this roster to ensure all running sessions map to authorized billets.
 - **Roster Updates**: Changes to billet allocations, prompt templates, or session postures require formal review by S-1 and approval by the Chief of Staff.

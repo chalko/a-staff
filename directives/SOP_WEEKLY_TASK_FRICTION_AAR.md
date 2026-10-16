@@ -12,7 +12,7 @@ This Standard Operating Procedure establishes the cadence, reporting format, and
 
 ---
 
-## 2. Battle Rhythm & Governance
+## 2. Staff Cadence & Governance
 
 - **Occurrence:** Weekly on **Fridays**.
 - **Execution Window:** Post-lunch analysis by staff sections; final synthesized review presented to Command **NO LATER THAN 1400 PDT**.
@@ -75,7 +75,7 @@ All weekly submissions must utilize the following standardized Markdown format:
 
 ---
 
-### 1. Executive Summary & Garrison Health
+### 1. Executive Summary & Workspace Health
 
 [High-level synthesis of weekly throughput, velocity, and top operational blockers encountered.]
 
@@ -104,7 +104,7 @@ All weekly submissions must utilize the following standardized Markdown format:
 ### 5. Playbook & Procedure Updates
 
 - **New SOPs / Recipes:** [Link newly authored documents in rigs/a-staff/playbooks/]
-- **Lessons Learned:** [Key operational takeaways for garrison continuity]
+- **Lessons Learned:** [Key operational takeaways for operational continuity]
 ```
 
 ---
@@ -113,10 +113,10 @@ All weekly submissions must utilize the following standardized Markdown format:
 
 **Authored By:**
 _S-3 Operations Officer (`s3-operations`)_
-Camp Colt Combat Operations Center
+Camp Colt Tactical Operations Watch
 Date: 2026-09-23
 
 **Endorsed By:**
 _Chief of Staff (`colt-cos`)_
-Camp Colt Battalion Headquarters
+Camp Colt Headquarters
 Authority: Directive `cc-wisp-s05f`
