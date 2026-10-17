@@ -2,9 +2,9 @@
 
 _Author: Nick Chalko_
 _Target: <https://showmetheinference.com> & Strategic Alignment_
-_Date: 2026-09-24_
+_Date: 2026-09-24 (Updated: 2026-10-16)_
 
-> In Marine Corps staff doctrine ([MCTP 3-30A](../references/MCTP_3-30A.md)), _Commander's Planning Guidance (CPG)_ establishes strategic intent, constraints, and priorities so a staff can operate autonomously without micromanagement. This document serves as both my public project charter and the root directive ingested by my [A-Staff](../README.md) agents.
+> In the Marine Corps Planning Process (_MCWP 5-1_) and staff doctrine ([_MCTP 3-30A_](../references/MCTP_3-30A.md)), the commander issues _Initial Intent and Planning Guidance_ to frame the problem, establish constraints, and designate the Main Effort so the staff can develop courses of action autonomously without micromanagement. This living document serves as both my public project charter and the root directive ingested by my [A-Staff](../README.md) agents.
 
 ---
 
