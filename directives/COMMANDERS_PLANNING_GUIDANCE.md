@@ -1,8 +1,7 @@
 # Commander's Planning Guidance: Show Me the Inference
 
-_Author: Nick Chalko_
-_Target: <https://showmetheinference.com> & Strategic Alignment_
-_Date: 2026-09-24 (Updated: 2026-10-16)_
+Status: Published
+Date Updated: 2026-10-16
 
 > In the Marine Corps Planning Process (_MCWP 5-1_) and staff doctrine ([_MCTP 3-30A_](../references/MCTP_3-30A.md)), the commander issues _Initial Intent and Planning Guidance_ to frame the problem, establish constraints, and designate the Main Effort so the staff can develop courses of action autonomously without micromanagement. This living document serves as both my public project charter and the root directive ingested by my [A-Staff](../README.md) agents.
 
