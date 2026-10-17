@@ -3,7 +3,8 @@
 ## 1. Fundamental Policy
 
 > _"Agent Staff takes its inspiration and form from the USMC staff process, but we are not playing soldiers here."_
-> — Commander's Planning Guidance (CPG) & Command Clarification
+>
+> - Commander's Planning Guidance (CPG) & Command Clarification
 
 Camp Colt employs the functional Marine Corps staff process to achieve structured division of responsibility, rigorous completed staff work, role specialization, and operational continuity across autonomous agent teams.
 
@@ -43,7 +44,7 @@ The following terms are banned across technical reports, plans, telemetry docume
 
 | Prohibited Theatrical Jargon                                                            | Authorized Engineering Terminology                         | Context & Rationale                                                                                                              |
 | :-------------------------------------------------------------------------------------- | :--------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `Classification: Sovereign Operations` / `Classification: Sovereign Appliance Internal` | `Document Type: <Technical Category>`                      | Delete faux classification stamps. Security is enforced via OpenSSH CA, Vault, and RBAC—not text markings.                       |
+| `Classification: Sovereign Operations` / `Classification: Sovereign Appliance Internal` | `Document Type: <Technical Category>`                      | Delete faux classification stamps. Security is enforced via OpenSSH CA, Vault, and RBAC, not text markings.                      |
 | `Combat Operations Center (COC)` / `Virtual COC`                                        | `Operations Watch` or `Tactical Operations`                | We manage agent swarms and Kubernetes clusters, not live combat zones.                                                           |
 | `Fires` / `Atmospherics` (for user metrics or analytics)                                | `User Sentiment`, `Product Telemetry`, or `System Metrics` | Borrowed from artillery doctrine during Operation Iraqi Freedom; completely inappropriate for human users or software telemetry. |
 | `Lines of Effort (LOE)` (when misapplied to ad-hoc tasks)                               | `Workstream`, `Initiative`, or `Project Epic`              | Keep project planning clear and focused.                                                                                         |
@@ -155,7 +156,7 @@ Used in `rigs/suitcase-ai/docs/`, `colony/docs/`, and `rigs/a-staff/plans/`:
 Used in `colony/docs/`:
 
 ```markdown
-# Commander's Update Brief (CUB) — Camp Colt
+# Commander's Update Brief (CUB): Camp Colt
 
 **Briefing ID:** CUB-YYYY-MM-DD-HHMM
 **Date / Timestamp:** <Day, DD Month YYYY, HHMM PDT>
