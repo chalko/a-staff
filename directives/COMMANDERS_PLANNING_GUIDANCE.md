@@ -74,7 +74,7 @@ documentation.
 A body of verifiable, open-source engineering work on
 **[showmetheinference.com](https://showmetheinference.com)** and associated
 public GitHub repositories that proves production-grade systems leadership in
-local inference and multi-agent orchestration—serving as the foundation for my
+local inference and multi-agent orchestration, serving as the foundation for my
 next decade of high-impact technical work.
 
 ---
